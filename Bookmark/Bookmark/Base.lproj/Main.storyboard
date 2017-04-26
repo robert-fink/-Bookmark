@@ -129,6 +129,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
+                    <connections>
+                        <outlet property="listViewUIView" destination="1yD-lh-F6Z" id="E1f-3B-LcX"/>
+                        <outlet property="tableViewSegmentControl" destination="KdK-Ur-ZZ3" id="fOj-7g-utV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-jQ-HgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,20 +330,40 @@
         <scene sceneID="xUP-Nb-9KY">
             <objects>
                 <viewController id="z2Y-1b-Sfm" customClass="ListViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hwe-qr-no9"/>
+                        <viewControllerLayoutGuide type="bottom" id="pJk-jM-bZy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hyu-XZ-e5W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TuQ-2r-gGF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TuQ-2r-gGF" firstAttribute="leading" secondItem="hyu-XZ-e5W" secondAttribute="leading" id="ImU-9j-yl8"/>
+                            <constraint firstItem="TuQ-2r-gGF" firstAttribute="top" secondItem="hwe-qr-no9" secondAttribute="bottom" id="S7V-jH-Gfe"/>
+                            <constraint firstAttribute="trailing" secondItem="TuQ-2r-gGF" secondAttribute="trailing" id="U92-c4-jAx"/>
+                            <constraint firstItem="pJk-jM-bZy" firstAttribute="top" secondItem="TuQ-2r-gGF" secondAttribute="bottom" id="q67-OG-dKb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyn-eq-ZKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4763" y="-923"/>
+            <point key="canvasLocation" x="4762.3999999999996" y="-923.83808095952031"/>
         </scene>
         <!--Collective View Controller-->
         <scene sceneID="9vT-5O-lMB">
             <objects>
                 <viewController id="8bI-1D-eGu" customClass="CollectiveViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ia-lz-R7U"/>
+                        <viewControllerLayoutGuide type="bottom" id="J3e-PX-vIs"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aLN-do-Hsx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
