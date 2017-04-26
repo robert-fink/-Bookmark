@@ -87,7 +87,7 @@
         <!--Profile-->
         <scene sceneID="Jle-zO-nRl">
             <objects>
-                <viewController id="Flr-XW-Q7T" sceneMemberID="viewController">
+                <viewController id="Flr-XW-Q7T" customClass="ProfileViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MKe-gj-R80"/>
                         <viewControllerLayoutGuide type="bottom" id="O6e-RE-a9W"/>
@@ -149,7 +149,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMl-0a-ULr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="916" y="250.52473763118442"/>
+            <point key="canvasLocation" x="-39" y="251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5JC-Ce-2Zc">

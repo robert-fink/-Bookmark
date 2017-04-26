@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41119C811EB10E3C006D059B /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41119C801EB10E3C006D059B /* pictures */; };
+		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
 		84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15671EAD9ED500C49414 /* AppDelegate.swift */; };
 		84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15691EAD9ED500C49414 /* ViewController.swift */; };
 		84CF156D1EAD9ED500C49414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF156B1EAD9ED500C49414 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
+		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		84CF15641EAD9ED500C49414 /* Bookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF15671EAD9ED500C49414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CF15691EAD9ED500C49414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,8 +103,10 @@
 		84CF15661EAD9ED500C49414 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
+				41119C801EB10E3C006D059B /* pictures */,
 				84CF15671EAD9ED500C49414 /* AppDelegate.swift */,
 				84CF15691EAD9ED500C49414 /* ViewController.swift */,
+				41119C821EB11483006D059B /* ProfileViewController.swift */,
 				84CF156B1EAD9ED500C49414 /* Main.storyboard */,
 				84CF15711EAD9ED500C49414 /* Assets.xcassets */,
 				84CF15731EAD9ED500C49414 /* LaunchScreen.storyboard */,
@@ -238,6 +244,7 @@
 				84CF15751EAD9ED500C49414 /* LaunchScreen.storyboard in Resources */,
 				84CF15721EAD9ED500C49414 /* Assets.xcassets in Resources */,
 				84CF156D1EAD9ED500C49414 /* Main.storyboard in Resources */,
+				41119C811EB10E3C006D059B /* pictures in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 			files = (
 				84CF15701EAD9ED500C49414 /* Bookmark.xcdatamodeld in Sources */,
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
+				41119C831EB11483006D059B /* ProfileViewController.swift in Sources */,
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +519,7 @@
 				84CF15911EAD9ED500C49414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CF15921EAD9ED500C49414 /* Build configuration list for PBXNativeTarget "BookmarkTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +528,7 @@
 				84CF15941EAD9ED500C49414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CF15951EAD9ED500C49414 /* Build configuration list for PBXNativeTarget "BookmarkUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +537,7 @@
 				84CF15971EAD9ED500C49414 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
