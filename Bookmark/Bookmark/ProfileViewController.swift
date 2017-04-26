@@ -11,9 +11,8 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     //vars
-    @IBOutlet weak var tableViewSegmentControl: UISegmentedControl!    
+    @IBOutlet weak var tableViewSegmentControl: UISegmentedControl!
     @IBOutlet weak var listViewUIView: UIView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
