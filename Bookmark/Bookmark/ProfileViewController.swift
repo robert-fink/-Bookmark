@@ -10,21 +10,48 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    //vars
-    @IBOutlet weak var tableViewSegmentControl: UISegmentedControl!
+    //segment controller
+    @IBOutlet weak var tableViewSegmentController: UISegmentedControl!
+    
+    //the UI Views - List and Collective
     @IBOutlet weak var listViewUIView: UIView!
+    @IBOutlet weak var collectiveViewUIView: UIView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        listViewUIView.isHidden = false
+        collectiveViewUIView.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
+    @IBAction func tableViewSegmentChange(_ sender: UISegmentedControl) {
+        
+        switch tableViewSegmentController.selectedSegmentIndex {
+        
+        case 0:
+            listViewUIView.isHidden = false
+            collectiveViewUIView.isHidden = true
+            
+        case 1:
+            listViewUIView.isHidden = true
+            collectiveViewUIView.isHidden = false
+            
+        default:
+            break
+            
+        }
+        
+    }
+
 
     /*
     // MARK: - Navigation

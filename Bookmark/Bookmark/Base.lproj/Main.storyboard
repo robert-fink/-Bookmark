@@ -102,8 +102,13 @@
                                     <segment title="List"/>
                                     <segment title="Collection"/>
                                 </segments>
+                                <connections>
+                                    <action selector="tableViewIndexChange:" destination="Flr-XW-Q7T" eventType="valueChanged" id="rkU-HH-kQq"/>
+                                    <action selector="tableViewSegmentChange:" destination="Flr-XW-Q7T" eventType="valueChanged" id="Y9B-7s-B8Z"/>
+                                    <action selector="tableViewSegmentController:" destination="Flr-XW-Q7T" eventType="valueChanged" id="iv5-nB-PsU"/>
+                                </connections>
                             </segmentedControl>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-lh-F6Z">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-lh-F6Z">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <connections>
                                     <segue destination="z2Y-1b-Sfm" kind="embed" id="Vje-xK-K2j"/>
@@ -130,8 +135,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
                     <connections>
-                        <outlet property="listViewUIView" destination="1yD-lh-F6Z" id="E1f-3B-LcX"/>
-                        <outlet property="tableViewSegmentControl" destination="KdK-Ur-ZZ3" id="fOj-7g-utV"/>
+                        <outlet property="collectiveViewUIView" destination="anv-hA-qMq" id="2DH-jc-Iz9"/>
+                        <outlet property="listViewUIView" destination="1yD-lh-F6Z" id="bJU-9d-btY"/>
+                        <outlet property="tableViewSegmentController" destination="KdK-Ur-ZZ3" id="5XY-m9-1Zi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-jQ-HgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
