@@ -96,18 +96,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dale's recommended books browsing screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zB-UX-hVf">
-                                <rect key="frame" x="15.5" y="323" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leo's browsing screen as a collection view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yt-Oy-z0h">
-                                <rect key="frame" x="26" y="394" width="323" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-Ur-ZZ3">
                                 <rect key="frame" x="112" y="89" width="151" height="29"/>
                                 <segments>
@@ -115,22 +103,36 @@
                                     <segment title="Collection"/>
                                 </segments>
                             </segmentedControl>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-lh-F6Z">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="z2Y-1b-Sfm" kind="embed" id="Vje-xK-K2j"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anv-hA-qMq">
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <connections>
+                                    <segue destination="8bI-1D-eGu" kind="embed" id="3RR-sw-mln"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1zB-UX-hVf" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="Oaq-hB-40g"/>
-                            <constraint firstItem="7Yt-Oy-z0h" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="ZUn-ud-jIG"/>
-                            <constraint firstItem="7Yt-Oy-z0h" firstAttribute="top" secondItem="1zB-UX-hVf" secondAttribute="bottom" constant="50" id="ZlY-6L-eKM"/>
+                            <constraint firstItem="anv-hA-qMq" firstAttribute="leading" secondItem="nph-yI-FiE" secondAttribute="leadingMargin" constant="-16" id="CnP-Si-hLW"/>
+                            <constraint firstItem="1yD-lh-F6Z" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="56" id="QTC-gU-Eaa"/>
                             <constraint firstItem="KdK-Ur-ZZ3" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="25" id="bQ8-FG-Rkh"/>
-                            <constraint firstItem="1zB-UX-hVf" firstAttribute="centerY" secondItem="nph-yI-FiE" secondAttribute="centerY" id="nVA-au-kmc"/>
+                            <constraint firstItem="anv-hA-qMq" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="ltM-vt-VsR"/>
                             <constraint firstItem="KdK-Ur-ZZ3" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="onh-hj-0Tj"/>
+                            <constraint firstItem="anv-hA-qMq" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="56" id="x1R-vI-vTJ"/>
+                            <constraint firstItem="1yD-lh-F6Z" firstAttribute="leading" secondItem="nph-yI-FiE" secondAttribute="leadingMargin" constant="-16" id="xDF-s1-u5i"/>
+                            <constraint firstItem="1yD-lh-F6Z" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="xPJ-U0-YhQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-jQ-HgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="-680"/>
+            <point key="canvasLocation" x="4016.8000000000002" y="-680.5097451274363"/>
         </scene>
         <!--Item-->
         <scene sceneID="lyf-WX-6bS">
@@ -319,6 +321,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4017" y="814"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="xUP-Nb-9KY">
+            <objects>
+                <viewController id="z2Y-1b-Sfm" customClass="ListViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hyu-XZ-e5W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kyn-eq-ZKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4763" y="-923"/>
+        </scene>
+        <!--Collective View Controller-->
+        <scene sceneID="9vT-5O-lMB">
+            <objects>
+                <viewController id="8bI-1D-eGu" customClass="CollectiveViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aLN-do-Hsx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="df8-4X-DNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4762" y="-418"/>
         </scene>
     </scenes>
     <resources>
