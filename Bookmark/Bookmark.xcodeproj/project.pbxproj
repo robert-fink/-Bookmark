@@ -11,6 +11,8 @@
 		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
 		41119C851EB118F9006D059B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C841EB118F9006D059B /* ListViewController.swift */; };
 		41119C871EB1191A006D059B /* CollectiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C861EB1191A006D059B /* CollectiveViewController.swift */; };
+		41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */; };
+		41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */; };
 		84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15671EAD9ED500C49414 /* AppDelegate.swift */; };
 		84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15691EAD9ED500C49414 /* ViewController.swift */; };
 		84CF156D1EAD9ED500C49414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF156B1EAD9ED500C49414 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		41119C841EB118F9006D059B /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		41119C861EB1191A006D059B /* CollectiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectiveViewController.swift; sourceTree = "<group>"; };
+		41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
+		41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewTableView.swift; sourceTree = "<group>"; };
 		84CF15641EAD9ED500C49414 /* Bookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF15671EAD9ED500C49414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CF15691EAD9ED500C49414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +111,6 @@
 		84CF15661EAD9ED500C49414 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
-				41119C801EB10E3C006D059B /* pictures */,
 				84CF15671EAD9ED500C49414 /* AppDelegate.swift */,
 				84CF15691EAD9ED500C49414 /* ViewController.swift */,
 				41119C821EB11483006D059B /* ProfileViewController.swift */,
@@ -118,6 +121,9 @@
 				84CF156E1EAD9ED500C49414 /* Bookmark.xcdatamodeld */,
 				41119C841EB118F9006D059B /* ListViewController.swift */,
 				41119C861EB1191A006D059B /* CollectiveViewController.swift */,
+				41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */,
+				41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */,
+				41119C801EB10E3C006D059B /* pictures */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -279,7 +285,9 @@
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
 				41119C831EB11483006D059B /* ProfileViewController.swift in Sources */,
 				41119C851EB118F9006D059B /* ListViewController.swift in Sources */,
+				41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */,
 				41119C871EB1191A006D059B /* CollectiveViewController.swift in Sources */,
+				41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */,
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -81,11 +81,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz"/>
+                    <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz">
+                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZh-6X-6Rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="80"/>
+            <point key="canvasLocation" x="3854" y="251"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Jle-zO-nRl">
@@ -105,19 +107,14 @@
                                     <segment title="List"/>
                                     <segment title="Collection"/>
                                 </segments>
-                                <connections>
-                                    <action selector="tableViewIndexChange:" destination="Flr-XW-Q7T" eventType="valueChanged" id="rkU-HH-kQq"/>
-                                    <action selector="tableViewSegmentChange:" destination="Flr-XW-Q7T" eventType="valueChanged" id="Y9B-7s-B8Z"/>
-                                    <action selector="tableViewSegmentController:" destination="Flr-XW-Q7T" eventType="valueChanged" id="iv5-nB-PsU"/>
-                                </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-lh-F6Z">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yD-lh-F6Z">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <connections>
                                     <segue destination="z2Y-1b-Sfm" kind="embed" id="Vje-xK-K2j"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anv-hA-qMq">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anv-hA-qMq">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <connections>
                                     <segue destination="8bI-1D-eGu" kind="embed" id="3RR-sw-mln"/>
@@ -129,14 +126,18 @@
                             <constraint firstItem="anv-hA-qMq" firstAttribute="leading" secondItem="nph-yI-FiE" secondAttribute="leadingMargin" constant="-16" id="CnP-Si-hLW"/>
                             <constraint firstItem="1yD-lh-F6Z" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="56" id="QTC-gU-Eaa"/>
                             <constraint firstItem="KdK-Ur-ZZ3" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="25" id="bQ8-FG-Rkh"/>
+                            <constraint firstItem="1yD-lh-F6Z" firstAttribute="bottom" secondItem="anv-hA-qMq" secondAttribute="bottom" id="dVg-iP-QF8"/>
                             <constraint firstItem="anv-hA-qMq" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="ltM-vt-VsR"/>
                             <constraint firstItem="KdK-Ur-ZZ3" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="onh-hj-0Tj"/>
+                            <constraint firstItem="1yD-lh-F6Z" firstAttribute="bottom" secondItem="O6e-RE-a9W" secondAttribute="top" id="qvW-ZA-uh3"/>
                             <constraint firstItem="anv-hA-qMq" firstAttribute="top" secondItem="MKe-gj-R80" secondAttribute="bottom" constant="56" id="x1R-vI-vTJ"/>
                             <constraint firstItem="1yD-lh-F6Z" firstAttribute="leading" secondItem="nph-yI-FiE" secondAttribute="leadingMargin" constant="-16" id="xDF-s1-u5i"/>
                             <constraint firstItem="1yD-lh-F6Z" firstAttribute="centerX" secondItem="nph-yI-FiE" secondAttribute="centerX" id="xPJ-U0-YhQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE">
+                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectiveViewUIView" destination="anv-hA-qMq" id="2DH-jc-Iz9"/>
                         <outlet property="listViewUIView" destination="1yD-lh-F6Z" id="bJU-9d-btY"/>
@@ -145,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-jQ-HgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4016.8000000000002" y="-680.5097451274363"/>
+            <point key="canvasLocation" x="3854" y="-567"/>
         </scene>
         <!--Item-->
         <scene sceneID="lyf-WX-6bS">
@@ -164,7 +165,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMl-0a-ULr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="251"/>
+            <point key="canvasLocation" x="575" y="251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5JC-Ce-2Zc">
@@ -290,11 +291,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E"/>
+                    <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E">
+                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNK-2P-vyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="1136"/>
+            <point key="canvasLocation" x="2983" y="1197"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wzO-ih-RSf">
@@ -315,7 +318,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqG-8v-3VX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3220" y="251"/>
+            <point key="canvasLocation" x="2852" y="251"/>
         </scene>
         <!--NYT Best Sellers-->
         <scene sceneID="akQ-Ot-SCp">
@@ -330,11 +333,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ"/>
+                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ">
+                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4017" y="814"/>
+            <point key="canvasLocation" x="3951" y="1197"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="xUP-Nb-9KY">
@@ -348,7 +353,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TuQ-2r-gGF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TuQ-2r-gGF" customClass="ListViewTableView" customModule="Bookmark" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -382,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df8-4X-DNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4762" y="-418"/>
+            <point key="canvasLocation" x="4762" y="-246"/>
         </scene>
     </scenes>
     <resources>
