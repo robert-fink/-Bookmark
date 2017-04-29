@@ -10,19 +10,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    //segment controller
-    @IBOutlet weak var tableViewSegmentController: UISegmentedControl!
-    
-    //the UI Views - List and Collective
-    @IBOutlet weak var listViewUIView: UIView!
-    @IBOutlet weak var collectiveViewUIView: UIView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        listViewUIView.isHidden = false
-        collectiveViewUIView.isHidden = true
         
     }
 
@@ -33,24 +24,7 @@ class ProfileViewController: UIViewController {
         
     }
     
-    @IBAction func tableViewSegmentChange(_ sender: UISegmentedControl) {
-        
-        switch tableViewSegmentController.selectedSegmentIndex {
-        
-        case 0:
-            listViewUIView.isHidden = false
-            collectiveViewUIView.isHidden = true
-            
-        case 1:
-            listViewUIView.isHidden = true
-            collectiveViewUIView.isHidden = false
-            
-        default:
-            break
-            
-        }
-        
-    }
+
 
 
     /*
