@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTu-zf-aIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="982"/>
+            <point key="canvasLocation" x="1865" y="1021"/>
         </scene>
         <!--My Books-->
         <scene sceneID="hJ5-h1-2JO">
@@ -253,24 +253,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t6y-gw-tLO">
-                                <rect key="frame" x="87" y="72" width="201" height="29"/>
-                                <segments>
-                                    <segment title="List" width="100"/>
-                                    <segment title="Collective" width="100"/>
-                                </segments>
-                                <connections>
-                                    <action selector="viewIndexChange:" destination="2zC-a0-vY6" eventType="valueChanged" id="ykU-Vq-ShQ"/>
-                                </connections>
-                            </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiO-lr-BhL" userLabel="Collective" customClass="MyBookCollectiveView" customModule="Bookmark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
-                                <connections>
-                                    <segue destination="9DE-MZ-CRy" kind="embed" id="cja-qA-MKZ"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-OI-CeH" userLabel="List" customClass="MyBookListView" customModule="Bookmark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <connections>
                                     <segue destination="0Xs-yG-i8M" kind="embed" id="sgS-Ug-97x"/>
                                 </connections>
@@ -278,30 +262,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LiO-lr-BhL" firstAttribute="leading" secondItem="KVq-FW-amf" secondAttribute="leading" id="HKf-Fm-rCi"/>
-                            <constraint firstItem="t6y-gw-tLO" firstAttribute="centerX" secondItem="KVq-FW-amf" secondAttribute="centerX" id="J0J-OB-joc"/>
-                            <constraint firstItem="hzB-Pb-g2h" firstAttribute="top" secondItem="eM3-OI-CeH" secondAttribute="bottom" id="Kc4-pD-lf6"/>
-                            <constraint firstAttribute="trailing" secondItem="LiO-lr-BhL" secondAttribute="trailing" id="LPs-1M-rgz"/>
-                            <constraint firstItem="eM3-OI-CeH" firstAttribute="leading" secondItem="KVq-FW-amf" secondAttribute="leading" id="Qvc-8J-niz"/>
-                            <constraint firstItem="t6y-gw-tLO" firstAttribute="top" secondItem="T1R-fC-AaS" secondAttribute="bottom" constant="8" id="Tkw-Ep-Hyh"/>
-                            <constraint firstItem="LiO-lr-BhL" firstAttribute="top" secondItem="t6y-gw-tLO" secondAttribute="bottom" constant="8" id="XnW-46-YJt"/>
-                            <constraint firstItem="eM3-OI-CeH" firstAttribute="top" secondItem="t6y-gw-tLO" secondAttribute="bottom" constant="8" id="Ymd-Iw-QIv"/>
-                            <constraint firstAttribute="trailing" secondItem="eM3-OI-CeH" secondAttribute="trailing" id="nyo-tX-Jnh"/>
-                            <constraint firstItem="hzB-Pb-g2h" firstAttribute="top" secondItem="LiO-lr-BhL" secondAttribute="bottom" id="taK-R4-zx2"/>
+                            <constraint firstItem="eM3-OI-CeH" firstAttribute="leading" secondItem="KVq-FW-amf" secondAttribute="leading" id="4tf-Qd-m9T"/>
+                            <constraint firstItem="eM3-OI-CeH" firstAttribute="top" secondItem="T1R-fC-AaS" secondAttribute="bottom" id="PnW-Th-fn3"/>
+                            <constraint firstItem="hzB-Pb-g2h" firstAttribute="top" secondItem="eM3-OI-CeH" secondAttribute="bottom" id="fMJ-nf-jiz"/>
+                            <constraint firstAttribute="trailing" secondItem="eM3-OI-CeH" secondAttribute="trailing" id="yKD-Jv-VFP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E">
                         <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="collectiveView" destination="LiO-lr-BhL" id="MnT-97-7aM"/>
                         <outlet property="listView" destination="eM3-OI-CeH" id="kYF-xn-php"/>
-                        <outlet property="viewSegmentController" destination="t6y-gw-tLO" id="60A-gc-qyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNK-2P-vyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="1196.8515742128936"/>
+            <point key="canvasLocation" x="2852" y="1021"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wzO-ih-RSf">
@@ -343,37 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3854" y="1197"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="BEb-hn-rCt">
-            <objects>
-                <viewController id="9DE-MZ-CRy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zzn-Dk-KZ5"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZoH-q0-O0k"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K1M-At-xGS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wh8-xY-SaO" customClass="CollectiveViewTableView" customModule="Bookmark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZoH-q0-O0k" firstAttribute="top" secondItem="Wh8-xY-SaO" secondAttribute="bottom" id="TgQ-Uy-m5N"/>
-                            <constraint firstItem="Wh8-xY-SaO" firstAttribute="leading" secondItem="K1M-At-xGS" secondAttribute="leading" id="Xb2-FK-Alq"/>
-                            <constraint firstItem="Wh8-xY-SaO" firstAttribute="top" secondItem="Zzn-Dk-KZ5" secondAttribute="bottom" id="mHD-pC-tGz"/>
-                            <constraint firstAttribute="trailing" secondItem="Wh8-xY-SaO" secondAttribute="trailing" id="oQz-ZR-jCZ"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cqd-Z0-NLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3340" y="1885.4572713643179"/>
+            <point key="canvasLocation" x="3854" y="1021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aIV-3N-fE3">
@@ -384,20 +330,47 @@
                         <viewControllerLayoutGuide type="bottom" id="BvJ-Zj-x2B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GVd-U7-a38">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-Nw-4xZ" customClass="ListViewTableView" customModule="Bookmark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-Nw-4xZ" customClass="ListViewTableView" customModule="Bookmark" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewTableViewCell" rowHeight="90" id="WMe-Mw-pg0" customClass="ListViewTableViewCell" customModule="Bookmark" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListViewTableViewCell" rowHeight="80" id="WMe-Mw-pg0" customClass="ListViewTableViewCell" customModule="Bookmark" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMe-Mw-pg0" id="Y48-Ua-Kjt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-hM-rBd">
+                                                    <rect key="frame" x="8" y="50.5" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-R1-o8e">
+                                                    <rect key="frame" x="8" y="18.5" width="359" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TsM-hM-rBd" secondAttribute="bottom" constant="0.5" id="RmJ-Lf-TXW"/>
+                                                <constraint firstItem="yc2-R1-o8e" firstAttribute="top" secondItem="Y48-Ua-Kjt" secondAttribute="topMargin" constant="10.5" id="UXm-89-lTR"/>
+                                                <constraint firstItem="TsM-hM-rBd" firstAttribute="trailing" secondItem="Y48-Ua-Kjt" secondAttribute="trailingMargin" id="cnY-Hp-9aN"/>
+                                                <constraint firstItem="TsM-hM-rBd" firstAttribute="top" secondItem="yc2-R1-o8e" secondAttribute="bottom" constant="8" id="hLB-9I-hnI"/>
+                                                <constraint firstItem="yc2-R1-o8e" firstAttribute="trailing" secondItem="Y48-Ua-Kjt" secondAttribute="trailingMargin" id="j4l-VD-5V5"/>
+                                                <constraint firstItem="TsM-hM-rBd" firstAttribute="top" secondItem="yc2-R1-o8e" secondAttribute="bottom" constant="8" id="jsa-r1-TWH"/>
+                                                <constraint firstItem="yc2-R1-o8e" firstAttribute="leading" secondItem="Y48-Ua-Kjt" secondAttribute="leadingMargin" id="nD2-hC-X75"/>
+                                                <constraint firstItem="TsM-hM-rBd" firstAttribute="leading" secondItem="Y48-Ua-Kjt" secondAttribute="leadingMargin" id="znv-G9-ZNu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Pcm-7L-Rq9" kind="show" id="opY-jD-QEw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -413,7 +386,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OZ-sR-rAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2432.8000000000002" y="1884.5577211394304"/>
+            <point key="canvasLocation" x="2852" y="1715.4422788605698"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Ke-gc-vHy">
+            <objects>
+                <viewController id="Pcm-7L-Rq9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GNO-0Z-riU"/>
+                        <viewControllerLayoutGuide type="bottom" id="F0A-uR-bZL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JfE-No-iph">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMS-Nk-IXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2852" y="2372"/>
         </scene>
     </scenes>
     <resources>

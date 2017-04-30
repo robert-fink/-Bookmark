@@ -12,7 +12,7 @@
 		4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */; };
 		4162AD821EB511AA00AA8D3B /* MyBookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD811EB511AA00AA8D3B /* MyBookListView.swift */; };
 		4162AD841EB511EF00AA8D3B /* MyBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */; };
-		4162AD881EB518CD00AA8D3B /* CollectiveViewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD871EB518CD00AA8D3B /* CollectiveViewTableView.swift */; };
+		4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */; };
 		41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */; };
 		41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */; };
 		84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15671EAD9ED500C49414 /* AppDelegate.swift */; };
@@ -48,7 +48,7 @@
 		4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookCollectiveView.swift; sourceTree = "<group>"; };
 		4162AD811EB511AA00AA8D3B /* MyBookListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookListView.swift; sourceTree = "<group>"; };
 		4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookViewController.swift; sourceTree = "<group>"; };
-		4162AD871EB518CD00AA8D3B /* CollectiveViewTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectiveViewTableView.swift; sourceTree = "<group>"; };
+		4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewTableViewController.swift; sourceTree = "<group>"; };
 		41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
 		41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewTableView.swift; sourceTree = "<group>"; };
 		84CF15641EAD9ED500C49414 /* Bookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +128,8 @@
 				4162AD811EB511AA00AA8D3B /* MyBookListView.swift */,
 				4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */,
 				41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */,
+				4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */,
 				41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */,
-				4162AD871EB518CD00AA8D3B /* CollectiveViewTableView.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4162AD881EB518CD00AA8D3B /* CollectiveViewTableView.swift in Sources */,
+				4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */,
 				84CF15701EAD9ED500C49414 /* Bookmark.xcdatamodeld in Sources */,
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
 				4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */,

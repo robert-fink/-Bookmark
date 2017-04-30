@@ -10,6 +10,9 @@ import UIKit
 
 class ListViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookAuthor: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

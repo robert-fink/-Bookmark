@@ -15,15 +15,11 @@ class MyBookViewController: UIViewController {
     
     //the Views
     @IBOutlet weak var listView: MyBookListView!
-    @IBOutlet weak var collectiveView: MyBookCollectiveView!
     
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        listView.isHidden = false
-        collectiveView.isHidden = true
 
     }
 
@@ -31,23 +27,7 @@ class MyBookViewController: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
-    
-    //segment button fxn to change the UIView
-    @IBAction func viewIndexChange(_ sender: UISegmentedControl) {
-        
-        switch viewSegmentController.selectedSegmentIndex {
-        case 0:
-            listView.isHidden = false
-            collectiveView.isHidden = true
-            
-        case 1:
-            listView.isHidden = true
-            collectiveView.isHidden = false
-            
-        default:
-            break
-        }
-    }
+
 
 
 }

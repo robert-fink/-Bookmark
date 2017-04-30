@@ -19,5 +19,128 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bookmark/ListViewTableViewController.swift"
+            timestampString = "515275142.660809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ListViewTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.__deallocating_deinit"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.391981"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.init (style : __C.UITableViewStyle) -&gt; Bookmark.ListViewTableViewController"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.393573"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; Bookmark.ListViewTableViewController"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.395734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Bookmark.ListViewTableViewController"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.397352"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Bookmark.ListViewTableViewController"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.398647"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bookmark.ListViewTableViewController&gt;"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.399874"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bookmark.ListViewTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Bookmark.ListViewTableViewController&gt;"
+                  moduleName = "Bookmark"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
+                  timestampString = "515276016.40111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
