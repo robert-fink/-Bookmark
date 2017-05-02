@@ -206,6 +206,9 @@
                                 <rect key="frame" x="109" y="501" width="160" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add favorite categories"/>
+                                <connections>
+                                    <segue destination="IaG-fr-xla" kind="show" id="xZN-RH-dK9"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJr-eB-Ri0">
                                 <rect key="frame" x="91" y="453" width="51" height="31"/>
@@ -389,6 +392,44 @@
             <point key="canvasLocation" x="3853.5999999999999" y="1020.5397301349326"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="9Cy-Nn-E96">
+            <objects>
+                <viewController id="IaG-fr-xla" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edY-c5-JTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="0rH-g7-v7D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PE7-zr-hSs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your favorite categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZG-qL-KOo">
+                                <rect key="frame" x="80" y="89" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8h-yA-yqA">
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E8h-yA-yqA" firstAttribute="top" secondItem="LZG-qL-KOo" secondAttribute="bottom" constant="15" id="DMg-Nk-m6o"/>
+                            <constraint firstAttribute="trailing" secondItem="E8h-yA-yqA" secondAttribute="trailing" id="Dnl-VD-7Mg"/>
+                            <constraint firstItem="E8h-yA-yqA" firstAttribute="leading" secondItem="PE7-zr-hSs" secondAttribute="leading" id="Jg2-fR-ZNE"/>
+                            <constraint firstItem="0rH-g7-v7D" firstAttribute="top" secondItem="E8h-yA-yqA" secondAttribute="bottom" id="VAh-N7-deA"/>
+                            <constraint firstItem="LZG-qL-KOo" firstAttribute="top" secondItem="edY-c5-JTW" secondAttribute="bottom" constant="25" id="jlh-Ma-OLS"/>
+                            <constraint firstItem="LZG-qL-KOo" firstAttribute="centerX" secondItem="PE7-zr-hSs" secondAttribute="centerX" id="uVj-eu-wtX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="raL-o8-BpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="1715"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="aIV-3N-fE3">
             <objects>
                 <viewController id="0Xs-yG-i8M" sceneMemberID="viewController">
@@ -408,7 +449,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMe-Mw-pg0" id="Y48-Ua-Kjt" customClass="ListViewTableViewCell" customModule="Bookmark" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsM-hM-rBd">
