@@ -102,6 +102,8 @@ class NYTBestSellerModel {
         return _bookWeekOnList
     }
     
+    init(){}
+    
     
     init(bookDict: Dictionary<String, AnyObject>, listDict: Dictionary<String, AnyObject>) {
         
@@ -139,5 +141,32 @@ class NYTBestSellerModel {
         if let bookRank = bookDict["rank"] as? Int{
             self._bookRank = bookRank
         }
+    }
+    
+    func loadJSON(fileName: String) -> [NYTBestSellerModel] {
+        var books = [NYTBestSellerModel]()
+        if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
+            let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+            books = parseJSON(data)
+        }
+        return books
+    }
+    
+    func parseJSON(_ data: Data) -> [NYTBestSellerModel] {
+        
+        var books = [NYTBestSellerModel]()
+        
+        if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+            let root = json as? Dictionary<String, AnyObject>
+            let results = root?["results"] as? Dictionary<String, AnyObject>
+            let lists = results?["lists"] as? [Dictionary<String, AnyObject>]
+            for resultsObject in lists! {
+                for element in (resultsObject["books"] as? [Dictionary<String, AnyObject>])! {
+                    let bookModel = NYTBestSellerModel(bookDict: element, listDict: resultsObject)
+                    books.append(bookModel)
+                }
+            }
+        }
+        return books
     }
 }

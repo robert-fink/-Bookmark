@@ -12,13 +12,14 @@ import UIKit
 
 class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var nytBestSeller = NYTBestSellerModel()
     var books = [NYTBestSellerModel]()
     var bookmodelCell: NYTBestSellerModel!
     var bookmodel: NYTBestSellerModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        books = loadJSON(fileName: "NYTimeBestSeller")
+        books = nytBestSeller.loadJSON(fileName: "NYTimeBestSeller")
         for obj in books {
             print(obj.bookListName)
             print(obj.bookImage)
@@ -45,6 +46,7 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
             cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
 
             return cell
+            
         } else {
             
             return UICollectionViewCell()
@@ -54,33 +56,21 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         // TODO: Send over through segue
+        var book: NYTBestSellerModel!
+        book = books[indexPath.row]
         print("You selected cell #\(indexPath.item)!")
+        //performSegue(withIdentifier: "NYTBookFavoriteVC", sender: book)
     }
+
     
-    func loadJSON(fileName: String) -> [NYTBestSellerModel] {
-        var books = [NYTBestSellerModel]()
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
-            let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-            books = parseJSON(data)
-        }
-        return books
-    }
-    
-    func parseJSON(_ data: Data) -> [NYTBestSellerModel] {
-        
-        var books = [NYTBestSellerModel]()
-        
-        if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-            let root = json as? Dictionary<String, AnyObject>
-            let results = root?["results"] as? Dictionary<String, AnyObject>
-            let lists = results?["lists"] as? [Dictionary<String, AnyObject>]
-            for resultsObject in lists! {
-                for element in (resultsObject["books"] as? [Dictionary<String, AnyObject>])! {
-                    let bookModel = NYTBestSellerModel(bookDict: element, listDict: resultsObject)
-                    books.append(bookModel)
-                }
-            }
-        }
-        return books
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "NYTBookFavoriteVC" {
+//            if let detailsVC = segue.destination as? NYTBookFavoriteVC {
+//                if let book = sender as? NYTBestSellerModel {
+//                    detailsVC.nytBestSellerModel = book
+//                    //detailsVC.pokemon = poke
+//                }
+//            }
+//        }
+//    }
 }

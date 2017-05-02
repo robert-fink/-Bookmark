@@ -16,6 +16,8 @@
 		2C53E1181EB7A6A900963D20 /* NYTBestSellerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */; };
 		2C9DD6731EB8D8C600F7502C /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DD6721EB8D8C600F7502C /* category.json */; };
 		2C9DD6751EB8D8D700F7502C /* NYTimeBestSeller.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */; };
+		2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */; };
+		2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */; };
 		41119C811EB10E3C006D059B /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41119C801EB10E3C006D059B /* pictures */; };
 		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
 		4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */; };
@@ -61,6 +63,8 @@
 		2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBestSellerVC.swift; sourceTree = "<group>"; };
 		2C9DD6721EB8D8C600F7502C /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NYTimeBestSeller.json; sourceTree = "<group>"; };
+		2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteVC.swift; sourceTree = "<group>"; };
+		2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteCV.swift; sourceTree = "<group>"; };
 		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
 		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookCollectiveView.swift; path = Bookmark/MyBookCollectiveView.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */,
 				41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */,
 				2C53E10D1EB7A60500963D20 /* NYTBestSellerCV.swift */,
+				2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				2C53E1121EB7A6A900963D20 /* HomeVC.swift */,
 				2C53E1131EB7A6A900963D20 /* BrowseBookVC.swift */,
 				2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */,
+				2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				2C53E10C1EB7A5BF00963D20 /* NYTUrl.swift in Sources */,
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
 				4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */,
+				2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */,
 				2C53E1161EB7A6A900963D20 /* HomeVC.swift in Sources */,
 				41119C831EB11483006D059B /* ProfileViewController.swift in Sources */,
 				2C53E1101EB7A61300963D20 /* NYTBestSellerModel.swift in Sources */,
@@ -469,6 +476,7 @@
 				41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */,
 				41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */,
 				2C53E10E1EB7A60500963D20 /* NYTBestSellerCV.swift in Sources */,
+				2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */,
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 				2C53E1181EB7A6A900963D20 /* NYTBestSellerVC.swift in Sources */,
 				4162AD821EB511AA00AA8D3B /* MyBookListView.swift in Sources */,
