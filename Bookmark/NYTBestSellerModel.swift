@@ -21,6 +21,8 @@ class NYTBestSellerModel {
     var _bookRank: Int!
     var _bookRankLastWeek: Int!
     var _bookWeekOnList: Int!
+    typealias JSONStandard = Dictionary<String, AnyObject>
+
     
     var bookListName: String {
         if _bookListName == nil {
@@ -99,6 +101,7 @@ class NYTBestSellerModel {
         
         return _bookWeekOnList
     }
+    
     
     init(bookDict: Dictionary<String, AnyObject>, listDict: Dictionary<String, AnyObject>) {
         
