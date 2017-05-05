@@ -9,6 +9,8 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
+    
+    var profile: [Profile] = []
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,7 +21,7 @@ class EditProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadProfile()
         dateFormatter.dateStyle = .short
     }
 
@@ -58,6 +60,33 @@ class EditProfileViewController: UIViewController {
             }
             
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
+    }
+    
+    func loadProfile() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            do {
+                profile = try context.fetch(Profile.fetchRequest())
+            } catch {
+                print("Profile core data fetch request failed.\n")
+            }
+            
+            if let profile = profile.last {
+                name.text = profile.name
+                if let birthday = profile.birthday as Date? {
+                    datePicker.date = birthday
+                }
+                if profile.is_fiction {
+                    fictionSwitch.setOn(true, animated: true)
+                } else {
+                    fictionSwitch.setOn(false, animated: true)
+                }
+                if profile.is_non_fiction {
+                    nonFictionSwitch.setOn(true, animated: true)
+                } else {
+                    nonFictionSwitch.setOn(false, animated: true)
+                }
+            }
         }
     }
     
