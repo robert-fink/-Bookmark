@@ -2,39 +2,84 @@
 //  ProfileViewController.swift
 //  Bookmark
 //
-//  Created by Leo Kim on 4/26/17.
+//  Created by Robert Fink on 4/26/17.
 //  Copyright © 2017 Fink, Robert. All rights reserved.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var profile: [Profile] = []
+    var favoriteCategories: [FavoriteCategory] = []
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var fictionLabel: UILabel!
+    @IBOutlet weak var nonFictionLabel: UILabel!
+    @IBOutlet weak var categoryTableView: UITableView!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        getProfileData()
+        getFavoriteCategories()
         
     }
 
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return favoriteCategories.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCategoryCell", for: indexPath)
+        cell.textLabel?.text = favoriteCategories[indexPath.row].name
+        return cell
+    }
+    
+    func getProfileData() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            do {
+                profile = try context.fetch(Profile.fetchRequest())
+            } catch {
+                print("Profile core data fetch request failed.\n")
+            }
+            
+            if let profile = profile.last {
+                if let name = profile.name {
+                    nameLabel.text = name + ", " + "\(profile.age)"
+                }
+                if profile.is_fiction {
+                    fictionLabel.text = "Fiction: On"
+                    print("Profile fiction on. \n ")
+                } else {
+                    print("Profile fiction off. \n ")
+                    fictionLabel.text = "Fiction: Off"
+                }
+                if profile.is_non_fiction {
+                    print("Profile non-fiction on. \n ")
+                    nonFictionLabel.text = "Non-fiction: On"
+                } else {
+                    print("Profile non-fiction off. \n ")
+                    nonFictionLabel.text = "Non-fiction: Off"
+                }
+            }
+        }
+    }
+    
+    func getFavoriteCategories() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            do {
+                favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest())
+                
+            } catch {
+                print("Favorite categories core data fetch request failed.\n")
+            }
+        }
+    }
+    
+    
 }
