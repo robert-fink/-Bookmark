@@ -44,31 +44,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name, Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubc-op-xWU">
-                                <rect key="frame" x="41" y="79" width="84" height="21"/>
+                                <rect key="frame" x="41" y="35" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fiction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQS-sa-7An">
-                                <rect key="frame" x="41" y="115" width="56" height="21"/>
+                                <rect key="frame" x="41" y="71" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non-fiction:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIQ-bf-B9V">
-                                <rect key="frame" x="41" y="151" width="91" height="21"/>
+                                <rect key="frame" x="41" y="107" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-Ld-8wi">
-                                <rect key="frame" x="41" y="187" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite Categories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-Ld-8wi">
+                                <rect key="frame" x="41" y="143" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-hu-oNd">
-                                <rect key="frame" x="0.0" y="233" width="375" height="385"/>
+                                <rect key="frame" x="0.0" y="189" width="375" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCategoryCell" id="Se3-Rn-HNo">
@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="vAH-Er-fi4">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qGJ-5F-b58">
                             <connections>
-                                <segue destination="GSr-EI-etJ" kind="show" id="rxA-wy-eQq"/>
+                                <segue destination="GSr-EI-etJ" kind="show" id="cEy-bq-4Q0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -188,6 +188,9 @@
                                 <state key="normal" title="Add Categories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Cdy-U6-PMB" kind="show" id="ePF-P0-rxd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -410,7 +413,6 @@
             </objects>
             <point key="canvasLocation" x="4748" y="428.63568215892059"/>
         </scene>
-      
         <!--Edit Favorite Categories View Controller-->
         <scene sceneID="k9k-xZ-sRV">
             <objects>
@@ -424,13 +426,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your favorite categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAh-Cg-GWZ">
-                                <rect key="frame" x="80" y="79" width="215" height="21"/>
+                                <rect key="frame" x="80" y="35" width="215" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="120" width="375" height="503"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -457,7 +459,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-e7-RLf">
-                                <rect key="frame" x="87.5" y="79" width="200" height="40"/>
+                                <rect key="frame" x="87.5" y="35" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Aga-I5-QYb"/>
@@ -466,9 +468,6 @@
                                 <state key="normal" title="Edit your favorite categories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="editCategories:" destination="Cdy-U6-PMB" eventType="touchUpInside" id="uqB-EC-idi"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -485,14 +484,12 @@
                     </view>
                     <connections>
                         <outlet property="categoryTableView" destination="lfy-ha-R8I" id="vem-iB-2Lo"/>
-                        <outlet property="editButton" destination="pqQ-e7-RLf" id="84s-Rf-gtX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFF-A5-xsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110" y="2633"/>
         </scene>
-
         <!--View Controller-->
         <scene sceneID="aIV-3N-fE3">
             <objects>
@@ -586,7 +583,7 @@
                         <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Q1-bp-WVO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q1-bp-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
