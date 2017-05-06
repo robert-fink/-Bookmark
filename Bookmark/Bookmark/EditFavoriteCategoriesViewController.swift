@@ -15,8 +15,9 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
     
     var favoriteCategories: [String] = []
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var categoryTableView: UITableView!
-    @IBOutlet weak var editButton: UIButton!
+//    @IBOutlet weak var editButton: UIButton!
     
 
     override func viewDidLoad() {
@@ -30,15 +31,26 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func editCategories(_ sender: UIButton) {
+    @IBAction func addCategories(_ sender: Any) {
         if (categoryTableView.isEditing) {
             categoryTableView.isEditing = false
-            editButton.setTitle("Edit your favorite categories", for: .normal)
+//            addButton.
+//            editButton.setTitle("Edit your favorite categories", for: .normal)
         } else {
             categoryTableView.isEditing = true
-            editButton.setTitle("Done", for: .normal)
+//            editButton.setTitle("Done", for: .normal)
         }
     }
+    
+//    @IBAction func editCategories(_ sender: UIButton) {
+//        if (categoryTableView.isEditing) {
+//            categoryTableView.isEditing = false
+//            editButton.setTitle("Edit your favorite categories", for: .normal)
+//        } else {
+//            categoryTableView.isEditing = true
+//            editButton.setTitle("Done", for: .normal)
+//        }
+//    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -70,13 +82,14 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
              // Delete the row from the data source
              tableView.deleteRows(at: [indexPath], with: .fade)
          } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
             favoriteCategories.append(categories[indexPath.row])
             print(favoriteCategories)
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 let category = FavoriteCategory(context: context)
                 category.name = categories[indexPath.row]
                 (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                categories.remove(at: indexPath.row)
+                tableView.reloadData()
             }
          }
      }

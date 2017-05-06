@@ -28,6 +28,7 @@
 		41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */; };
 		8490C2EA1EB92664004A3390 /* EditFavoriteCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */; };
 		8490C2EC1EB92C07004A3390 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */; };
+		84AC5E6F1EBD2A4100930CEE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */; };
 		84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15671EAD9ED500C49414 /* AppDelegate.swift */; };
 		84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15691EAD9ED500C49414 /* ViewController.swift */; };
 		84CF156D1EAD9ED500C49414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF156B1EAD9ED500C49414 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableView.swift; path = Bookmark/ListViewTableView.swift; sourceTree = "<group>"; };
 		8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFavoriteCategoriesViewController.swift; sourceTree = "<group>"; };
 		8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		84CF15641EAD9ED500C49414 /* Bookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF15671EAD9ED500C49414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CF15691EAD9ED500C49414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				41119C821EB11483006D059B /* ProfileViewController.swift */,
 				8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */,
 				8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */,
+				84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			files = (
 				4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */,
 				84CF15701EAD9ED500C49414 /* Bookmark.xcdatamodeld in Sources */,
+				84AC5E6F1EBD2A4100930CEE /* MainTabBarController.swift in Sources */,
 				2C53E1151EB7A6A900963D20 /* ProfileVC.swift in Sources */,
 				2C53E1171EB7A6A900963D20 /* BrowseBookVC.swift in Sources */,
 				2C53E10C1EB7A5BF00963D20 /* NYTUrl.swift in Sources */,
