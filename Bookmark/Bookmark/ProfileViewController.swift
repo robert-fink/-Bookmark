@@ -10,7 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var profile: [Profile] = []
-    var favoriteCategories: [FavoriteCategory] = []
+    var favoriteCategories = [FavoriteCategory]()
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var fictionLabel: UILabel!
@@ -37,7 +37,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCategoryCell", for: indexPath)
-        cell.textLabel?.text = favoriteCategories[indexPath.row].name
+        let sortFavorites = favoriteCategories.sorted(by: {$0.name! < $1.name!} )
+        cell.textLabel?.text = sortFavorites[indexPath.row].name
         return cell
     }
     
@@ -87,6 +88,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func loadCategory() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             
+            
             // Get the resource URL for the JSON file
             let url = Bundle.main.url(forResource: "category", withExtension: "json")
             
@@ -102,10 +104,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
                 // From jsonRoot get the results dictionary
                 let results = jsonRoot?["results"] as? [Dictionary<String, AnyObject>]
+                
+                // Loop through the JSON results node
                 for resultObject in results! {
+                    
                     let bookCategory = FavoriteCategory(context: context)
                     bookCategory.name = resultObject["list_name"] as? String
-                    favoriteCategories.append(bookCategory)
+                    // If the global favoriteCategories array does not contain the new
+                    if !favoriteCategories.contains(bookCategory) {
+                        favoriteCategories.append(bookCategory)
+                    } else {
+                        print("\(bookCategory) is already in list")
+                    }
                 }
                 
                 (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
