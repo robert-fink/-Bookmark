@@ -43,7 +43,8 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as? NYTBestSellerCV {
             let bookmodelCell = books[indexPath.row]
             cell.configureCellForBookObj(nytBestSellerBookModel: bookmodelCell)
-            cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+            //cell.backgroundColor = .clearColor
+            // make cell more visible in our example project
 
             return cell
             
@@ -52,6 +53,8 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
             return UICollectionViewCell()
         }
     }
+    
+    
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events

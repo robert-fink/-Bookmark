@@ -22,6 +22,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         getProfileData()
         getFavoriteCategories()
         
+        // TODO: NEED TO SORT BY ABC
+        loadCategory()
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -77,6 +80,35 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
             } catch {
                 print("Favorite categories core data fetch request failed.\n")
+            }
+        }
+    }
+    
+    func loadCategory() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            // Get the resource URL for the JSON file
+            let url = Bundle.main.url(forResource: "category", withExtension: "json")
+            
+            // Get the data from the URL path
+            let data = try? Data(contentsOf: url!)
+            
+            do {
+                
+                //let book = bookType?.caseInsensitiveCompare(
+                
+                // Get JSON root as Dictionary
+                let jsonRoot = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+                
+                // From jsonRoot get the results dictionary
+                let results = jsonRoot?["results"] as? [Dictionary<String, AnyObject>]
+                for resultObject in results! {
+                    let bookCategory = FavoriteCategory(context: context)
+                    bookCategory.name = resultObject["list_name"] as? String
+                    favoriteCategories.append(bookCategory)
+                }
+                
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             }
         }
     }
