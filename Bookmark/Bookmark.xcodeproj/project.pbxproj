@@ -18,6 +18,7 @@
 		2C9DD6751EB8D8D700F7502C /* NYTimeBestSeller.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */; };
 		2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */; };
 		2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */; };
+		35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A674581EBD63B9002457B5 /* NYTTabBarController.swift */; };
 		41119C811EB10E3C006D059B /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41119C801EB10E3C006D059B /* pictures */; };
 		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
 		4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */; };
@@ -67,6 +68,7 @@
 		2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NYTimeBestSeller.json; sourceTree = "<group>"; };
 		2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteVC.swift; sourceTree = "<group>"; };
 		2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteCV.swift; sourceTree = "<group>"; };
+		35A674581EBD63B9002457B5 /* NYTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTTabBarController.swift; sourceTree = "<group>"; };
 		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
 		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookCollectiveView.swift; path = Bookmark/MyBookCollectiveView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				2C53E10B1EB7A5BF00963D20 /* NYTUrl.swift */,
 			);
 			name = Singleton;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2C53E1081EB7A59600963D20 /* Model */ = {
@@ -132,6 +135,7 @@
 				2C53E10F1EB7A61300963D20 /* NYTBestSellerModel.swift */,
 			);
 			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2C53E1091EB7A59F00963D20 /* View */ = {
@@ -146,6 +150,7 @@
 				2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */,
 			);
 			name = View;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2C53E10A1EB7A5A700963D20 /* Controller */ = {
@@ -157,8 +162,10 @@
 				2C53E1131EB7A6A900963D20 /* BrowseBookVC.swift */,
 				2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */,
 				2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */,
+				35A674581EBD63B9002457B5 /* NYTTabBarController.swift */,
 			);
 			name = Controller;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		2C9DD66F1EB8D81B00F7502C /* JSON */ = {
@@ -168,16 +175,12 @@
 				2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */,
 			);
 			name = JSON;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		84CF155B1EAD9ED500C49414 = {
 			isa = PBXGroup;
 			children = (
-				2C9DD66F1EB8D81B00F7502C /* JSON */,
-				2C53E10A1EB7A5A700963D20 /* Controller */,
-				2C53E1091EB7A59F00963D20 /* View */,
-				2C53E1081EB7A59600963D20 /* Model */,
-				2C53E1071EB7A58D00963D20 /* Singleton */,
 				84CF15661EAD9ED500C49414 /* Bookmark */,
 				84CF157E1EAD9ED500C49414 /* BookmarkTests */,
 				84CF15891EAD9ED500C49414 /* BookmarkUITests */,
@@ -198,6 +201,11 @@
 		84CF15661EAD9ED500C49414 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
+				2C9DD66F1EB8D81B00F7502C /* JSON */,
+				2C53E10A1EB7A5A700963D20 /* Controller */,
+				2C53E1091EB7A59F00963D20 /* View */,
+				2C53E1081EB7A59600963D20 /* Model */,
+				2C53E1071EB7A58D00963D20 /* Singleton */,
 				84CF15671EAD9ED500C49414 /* AppDelegate.swift */,
 				84CF15691EAD9ED500C49414 /* ViewController.swift */,
 				84CF156B1EAD9ED500C49414 /* Main.storyboard */,
@@ -470,6 +478,7 @@
 				4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */,
 				84CF15701EAD9ED500C49414 /* Bookmark.xcdatamodeld in Sources */,
 				2C53E1151EB7A6A900963D20 /* ProfileVC.swift in Sources */,
+				35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */,
 				2C53E1171EB7A6A900963D20 /* BrowseBookVC.swift in Sources */,
 				2C53E10C1EB7A5BF00963D20 /* NYTUrl.swift in Sources */,
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
