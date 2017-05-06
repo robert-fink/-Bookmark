@@ -10,7 +10,10 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var profile: [Profile] = []
-    var favoriteCategories: [FavoriteCategory] = []
+    //var nytcategory: NYTCategory!
+    var favoriteCategories = [NYTCategory]()
+    var nytCategory = NYTCategory()
+    
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var fictionLabel: UILabel!
@@ -19,11 +22,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getProfileData()
-        getFavoriteCategories()
-        
+        //getProfileData()
         // TODO: NEED TO SORT BY ABC
-        loadCategory()
+        favoriteCategories = nytCategory.loadCategoryJSON(fileName: "category")
+        //print(favoriteCategories)
+        //getFavoriteCategories()
+        
+
         
     }
 
@@ -32,14 +37,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        // This return over 2,000 file should only be 53
+        print("This is from number of rows in sections\(favoriteCategories.count)")
         return favoriteCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCategoryCell", for: indexPath)
         // Sort the global array favorities categories
-        let sortFavorites = favoriteCategories.sorted(by: {$0.name! < $1.name!} )
-        cell.textLabel?.text = sortFavorites[indexPath.row].name
+        let sortFavorites = favoriteCategories.sorted(by: {$0.bookListName < $1.bookListName } )
+        cell.textLabel?.text = sortFavorites[indexPath.row].bookListName
         return cell
     }
     
@@ -78,7 +86,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             
             do {
-                favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest())
+                // TODO: I dont get this
+                favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest()) as! [NYTCategory]
+                print("This is the getFavoriteCategories\(favoriteCategories.count)")
                 
             } catch {
                 print("Favorite categories core data fetch request failed.\n")
@@ -104,23 +114,26 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
                 // From jsonRoot get the results dictionary
                 let results = jsonRoot?["results"] as? [Dictionary<String, AnyObject>]
+                let bookCategory = FavoriteCategory(context: context)
                 // Loop through the JSON results node
                 for resultObject in results! {
                     
-                    let bookCategory = FavoriteCategory(context: context)
-                    bookCategory.name = resultObject["list_name"] as? String
+                    //favoriteCategories = resultObject["list_name"] as? String
+                    //bookCategory.name = resultObject["list_name"] as? String
                     
                     // If the global favoriteCategories array does not contain the new value
-                    if !favoriteCategories.contains(bookCategory) {
-                        
-                        // Add it to the global array
-                        favoriteCategories.append(bookCategory)
-                    } else {
-                        print("\(bookCategory) is already in list")
-                    }
+//                    if !favoriteCategories.contains(bookCategory) {
+//                        print(bookCategory)
+//                        // Add it to the global array
+//                        favoriteCategories.append(bookCategory)
+//                    } else {
+//                        print("\(bookCategory) is already in list")
+//                    }
+                    (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+
                 }
                 
-                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+
             }
         }
     }

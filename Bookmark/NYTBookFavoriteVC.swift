@@ -16,7 +16,7 @@ class NYTBookFavoriteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        books = nytBestSellerModel.loadJSON(fileName: "NYTimeBestSeller")
+        //books = nytBestSellerModel.loadJSON(fileName: "NYTimeBestSeller")
 
         // Do any additional setup after loading the view.
     }

@@ -18,6 +18,7 @@
 		2C9DD6751EB8D8D700F7502C /* NYTimeBestSeller.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */; };
 		2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */; };
 		2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */; };
+		350579941EBE5DA200C285B8 /* NYTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350579931EBE5DA200C285B8 /* NYTCategory.swift */; };
 		35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A674581EBD63B9002457B5 /* NYTTabBarController.swift */; };
 		41119C811EB10E3C006D059B /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41119C801EB10E3C006D059B /* pictures */; };
 		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
@@ -69,6 +70,7 @@
 		2C9DD6741EB8D8D700F7502C /* NYTimeBestSeller.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NYTimeBestSeller.json; sourceTree = "<group>"; };
 		2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteVC.swift; sourceTree = "<group>"; };
 		2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteCV.swift; sourceTree = "<group>"; };
+		350579931EBE5DA200C285B8 /* NYTCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTCategory.swift; sourceTree = "<group>"; };
 		35A674581EBD63B9002457B5 /* NYTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTTabBarController.swift; sourceTree = "<group>"; };
 		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
 		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				2C53E10F1EB7A61300963D20 /* NYTBestSellerModel.swift */,
+				350579931EBE5DA200C285B8 /* NYTCategory.swift */,
 			);
 			name = Model;
 			path = ..;
@@ -499,6 +502,7 @@
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 				2C53E1181EB7A6A900963D20 /* NYTBestSellerVC.swift in Sources */,
 				8490C2EA1EB92664004A3390 /* EditFavoriteCategoriesViewController.swift in Sources */,
+				350579941EBE5DA200C285B8 /* NYTCategory.swift in Sources */,
 				4162AD821EB511AA00AA8D3B /* MyBookListView.swift in Sources */,
 				8490C2EC1EB92C07004A3390 /* EditProfileViewController.swift in Sources */,
 			);

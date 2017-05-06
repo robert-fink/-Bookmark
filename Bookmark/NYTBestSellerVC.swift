@@ -19,12 +19,13 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //This is how I am reading in the books
         books = nytBestSeller.loadJSON(fileName: "NYTimeBestSeller")
-        for obj in books {
-            print(obj.bookListName)
-            print(obj.bookImage)
-            
-        }
+//        for obj in books {
+//            print(obj.bookListName)
+//            print(obj.bookImage)
+//            
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,9 +34,10 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("This is the collection view\(self.books.count)")
         return self.books.count
     }
-    
+
     // make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -59,8 +61,8 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         // TODO: Send over through segue
-        var book: NYTBestSellerModel!
-        book = books[indexPath.row]
+        //var book: NYTBestSellerModel!
+        //book = books[indexPath.row]
         print("You selected cell #\(indexPath.item)!")
         //performSegue(withIdentifier: "NYTBookFavoriteVC", sender: book)
     }
