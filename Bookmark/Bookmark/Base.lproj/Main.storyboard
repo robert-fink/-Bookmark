@@ -364,14 +364,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-R9-VeS">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-R9-VeS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Q6-hK-N15">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Q6-hK-N15">
                                 <rect key="frame" x="0.0" y="71" width="375" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y9P-KU-hOD">
                                     <size key="itemSize" width="100" height="130"/>
@@ -387,9 +385,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO9-ZS-pyK">
+                                                <label clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO9-ZS-pyK">
                                                     <rect key="frame" x="0.0" y="88" width="100" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="8"/>
@@ -397,14 +394,23 @@
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:raX-gh-Gg0:image" translatesAutoresizingMaskIntoConstraints="NO" id="raX-gh-Gg0">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:raX-gh-Gg0:image" translatesAutoresizingMaskIntoConstraints="NO" id="raX-gh-Gg0">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="90"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="raX-gh-Gg0" secondAttribute="trailing" id="IQV-uD-oLX"/>
+                                            <constraint firstItem="raX-gh-Gg0" firstAttribute="top" secondItem="Hsi-Ir-lVV" secondAttribute="top" id="MiM-hq-CoB"/>
+                                            <constraint firstItem="raX-gh-Gg0" firstAttribute="trailing" secondItem="UO9-ZS-pyK" secondAttribute="trailing" id="QvS-1t-RRg"/>
+                                            <constraint firstAttribute="bottom" secondItem="UO9-ZS-pyK" secondAttribute="bottom" id="ibe-3I-DFP"/>
+                                            <constraint firstItem="UO9-ZS-pyK" firstAttribute="top" secondItem="Hsi-Ir-lVV" secondAttribute="topMargin" constant="80" id="pVS-RB-PP3"/>
+                                            <constraint firstItem="raX-gh-Gg0" firstAttribute="leading" secondItem="UO9-ZS-pyK" secondAttribute="leading" id="qX6-qj-ufX"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="raX-gh-Gg0" secondAttribute="bottom" constant="32" id="xRb-k0-8dt"/>
+                                            <constraint firstItem="raX-gh-Gg0" firstAttribute="leading" secondItem="Hsi-Ir-lVV" secondAttribute="leading" id="zBt-Qw-O1F"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="bookImage" destination="raX-gh-Gg0" id="TOG-pG-LY9"/>
                                             <outlet property="myLabel" destination="UO9-ZS-pyK" id="2WT-RW-r3g"/>
@@ -418,6 +424,16 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7Q6-hK-N15" secondAttribute="trailing" id="8YO-oG-2bz"/>
+                            <constraint firstAttribute="trailing" secondItem="9uO-R9-VeS" secondAttribute="trailing" id="BP9-bC-IoW"/>
+                            <constraint firstItem="9uO-R9-VeS" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="C21-qf-p18"/>
+                            <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="7Q6-hK-N15" secondAttribute="bottom" id="Chf-Lg-svf"/>
+                            <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="9uO-R9-VeS" secondAttribute="bottom" constant="544" id="HDi-hM-tie"/>
+                            <constraint firstItem="7Q6-hK-N15" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="Prx-Ry-Jx2"/>
+                            <constraint firstItem="9uO-R9-VeS" firstAttribute="top" secondItem="RPg-bu-vPl" secondAttribute="top" id="hUn-va-WGF"/>
+                            <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" constant="51" id="tGy-bQ-qUZ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ">
                         <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
@@ -601,7 +617,7 @@
                         <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Q1-bp-WVO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q1-bp-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
