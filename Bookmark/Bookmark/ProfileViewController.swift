@@ -37,6 +37,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCategoryCell", for: indexPath)
+
+        // Sort the global array favorities categories
         let sortFavorites = favoriteCategories.sorted(by: {$0.name! < $1.name!} )
         cell.textLabel?.text = sortFavorites[indexPath.row].name
         return cell
@@ -77,6 +79,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             
             do {
+                
                 favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest())
                 
             } catch {
@@ -85,6 +88,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    // TODO: NEED TO REMOVE DUPLICATES
     func loadCategory() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             
@@ -110,8 +114,11 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     let bookCategory = FavoriteCategory(context: context)
                     bookCategory.name = resultObject["list_name"] as? String
-                    // If the global favoriteCategories array does not contain the new
+                    
+                    // If the global favoriteCategories array does not contain the new value
                     if !favoriteCategories.contains(bookCategory) {
+                        
+                        // Add it to the global array
                         favoriteCategories.append(bookCategory)
                     } else {
                         print("\(bookCategory) is already in list")
