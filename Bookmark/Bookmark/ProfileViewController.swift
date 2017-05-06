@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         getProfileData()
         getFavoriteCategories()
         
-        // TODO: NEED TO SORT BY ABC
+        // TODO: NEED TO REMOVE DUPLICATES
         loadCategory()
         
     }
