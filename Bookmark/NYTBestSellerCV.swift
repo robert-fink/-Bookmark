@@ -2,10 +2,11 @@ import UIKit
 
 class NYTBestSellerCV: UICollectionViewCell {
     
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var bookImage: UIImageView!
+
     var nytBestSellerBookModel: NYTBestSellerModel!
 
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var myLabel: UILabel!
     
     func configureCellForBookObj(nytBestSellerBookModel: NYTBestSellerModel) {
         
