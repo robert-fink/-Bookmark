@@ -11,7 +11,7 @@ import UIKit
 class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
         // removed Combined Print and E-Book Fiction","Combined Print and E-Book Nonfiction"
-     var categories: [String] = ["Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Young Adult Paperback","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
+//     var categories: [String] = ["Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Young Adult Paperback","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
     
     var favoriteCategories: [String] = []
     
@@ -57,12 +57,12 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+        return favoriteCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row]
+        cell.textLabel?.text = favoriteCategories[indexPath.row]
         return cell
     }
     
@@ -82,11 +82,11 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
              // Delete the row from the data source
              tableView.deleteRows(at: [indexPath], with: .fade)
          } else if editingStyle == .insert {
-            favoriteCategories.append(categories[indexPath.row])
+            favoriteCategories.append(favoriteCategories[indexPath.row])
             print(favoriteCategories)
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 let category = FavoriteCategory(context: context)
-                category.name = categories[indexPath.row]
+                category.name = favoriteCategories[indexPath.row]
                 (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
                 categories.remove(at: indexPath.row)
                 tableView.reloadData()
