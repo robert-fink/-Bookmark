@@ -42,28 +42,40 @@ class EditProfileViewController: UIViewController {
         }
     }
 
-    @IBAction func saveProfile(_ sender: UIButton) {
+    @IBAction func saveProfile(_ sender: Any) {
+        print("Entered saved profile function.")
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let profile = Profile(context: context)
             profile.name = name.text
+            print(profile.name!)
             profile.birthday = datePicker.date as NSDate
+            print(profile.birthday!)
             profile.age = Int16(calculateAge(birthdate: datePicker.date))
+            print(profile.age)
             if fictionSwitch.isOn {
                 profile.is_fiction = true
             } else {
                 profile.is_fiction = false
             }
+            print(profile.is_fiction)
             if nonFictionSwitch.isOn {
                 profile.is_non_fiction = true
             } else {
                 profile.is_non_fiction = false
             }
+            print(profile.is_non_fiction)
             
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            print("Save Checkpoint.")
+            
+            performSegue(withIdentifier: "savedProfile", sender: UIBarButtonItem())
         }
     }
+
     
     func loadProfile() {
+        print("Entered Load Profile method")
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             do {
                 profile = try context.fetch(Profile.fetchRequest())
