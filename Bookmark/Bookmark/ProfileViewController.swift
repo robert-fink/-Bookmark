@@ -95,48 +95,4 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             }
         }
     }
-    
-    func loadCategory() {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            
-            // Get the resource URL for the JSON file
-            let url = Bundle.main.url(forResource: "category", withExtension: "json")
-            
-            // Get the data from the URL path
-            let data = try? Data(contentsOf: url!)
-            
-            do {
-                
-                //let book = bookType?.caseInsensitiveCompare(
-                
-                // Get JSON root as Dictionary
-                let jsonRoot = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                
-                // From jsonRoot get the results dictionary
-                let results = jsonRoot?["results"] as? [Dictionary<String, AnyObject>]
-                let bookCategory = FavoriteCategory(context: context)
-                // Loop through the JSON results node
-                for resultObject in results! {
-                    
-                    //favoriteCategories = resultObject["list_name"] as? String
-                    //bookCategory.name = resultObject["list_name"] as? String
-                    
-                    // If the global favoriteCategories array does not contain the new value
-//                    if !favoriteCategories.contains(bookCategory) {
-//                        print(bookCategory)
-//                        // Add it to the global array
-//                        favoriteCategories.append(bookCategory)
-//                    } else {
-//                        print("\(bookCategory) is already in list")
-//                    }
-                    (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-
-                }
-                
-
-            }
-        }
-    }
-    
-    
 }
