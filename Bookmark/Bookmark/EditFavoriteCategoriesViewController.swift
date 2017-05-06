@@ -11,11 +11,11 @@ import UIKit
 class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
         // removed Combined Print and E-Book Fiction","Combined Print and E-Book Nonfiction"
-//     var categories: [String] = ["Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Young Adult Paperback","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
+     var categories: [String] = ["Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Young Adult Paperback","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
     
     var favoriteCategories = [FavoriteCategory]()
     
-    @IBOutlet weak var addButton: UIBarButtonItem!
+//    @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var categoryTableView: UITableView!
 //    @IBOutlet weak var editButton: UIButton!
     
@@ -31,16 +31,16 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addCategories(_ sender: Any) {
-        if (categoryTableView.isEditing) {
-            categoryTableView.isEditing = false
-//            addButton.
-//            editButton.setTitle("Edit your favorite categories", for: .normal)
-        } else {
-            categoryTableView.isEditing = true
-//            editButton.setTitle("Done", for: .normal)
-        }
-    }
+//    @IBAction func addCategories(_ sender: Any) {
+//        if (categoryTableView.isEditing) {
+//            categoryTableView.isEditing = false
+////            addButton.
+////            editButton.setTitle("Edit your favorite categories", for: .normal)
+//        } else {
+//            categoryTableView.isEditing = true
+////            editButton.setTitle("Done", for: .normal)
+//        }
+//    }
     
 //    @IBAction func editCategories(_ sender: UIButton) {
 //        if (categoryTableView.isEditing) {
@@ -57,13 +57,14 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("EditFavoriteCategories\(favoriteCategories.count)")
-        return favoriteCategories.count
+//        print("EditFavoriteCategories\(favoriteCategories.count)")
+        return categories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
 //        cell.textLabel?.text = favoriteCategories[indexPath.row].name
+        cell.textLabel?.text = categories[indexPath.row]
         return cell
     }
     
