@@ -23,9 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz">
-                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZh-6X-6Rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,9 +299,7 @@
                             <constraint firstAttribute="trailing" secondItem="X0c-Eo-svF" secondAttribute="trailing" id="jby-4d-Zsa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E">
-                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNK-2P-vyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,9 +401,7 @@
                             <constraint firstItem="9uO-R9-VeS" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="wnD-hq-SwW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ">
-                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -580,9 +574,7 @@
         <scene sceneID="Ihw-CB-uN3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wDT-M1-fTH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE">
-                        <inset key="imageInsets" minX="6" minY="6" maxX="6" maxY="6"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q1-bp-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -599,12 +591,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Books" width="50" height="50"/>
-        <image name="Browse" width="50" height="50"/>
-        <image name="List" width="50" height="50"/>
-        <image name="Profile" width="50" height="50"/>
+        <image name="Books" width="25" height="25"/>
+        <image name="Browse" width="25" height="25"/>
+        <image name="List" width="25" height="25"/>
+        <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8S1-C7-5hl"/>
+        <segue reference="ZPP-Y4-AAB"/>
     </inferredMetricsTieBreakers>
 </document>
