@@ -180,10 +180,10 @@
                                 <rect key="frame" x="91" y="358" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmS-nh-Uk3">
-                                <rect key="frame" x="91" y="439" width="192" height="42"/>
+                                <rect key="frame" x="97" y="439" width="180" height="42"/>
                                 <color key="backgroundColor" red="0.3753450754206698" green="0.57932049605090552" blue="0.75616671954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                <state key="normal" title="Add Categories">
+                                <state key="normal" title="My Categories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -410,7 +410,7 @@
         <!--Edit Favorite Categories View Controller-->
         <scene sceneID="k9k-xZ-sRV">
             <objects>
-                <viewController id="Cdy-U6-PMB" customClass="EditFavoriteCategoriesViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Cdy-U6-PMB" customClass="EditFavoriteCategoriesViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zBe-RX-cZV"/>
                         <viewControllerLayoutGuide type="bottom" id="FG6-ny-q1o"/>
@@ -419,14 +419,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your favorite categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAh-Cg-GWZ">
-                                <rect key="frame" x="80" y="35" width="215" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -452,37 +446,44 @@
                                     <outlet property="delegate" destination="Cdy-U6-PMB" id="jwH-4d-fU5"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqQ-e7-RLf">
-                                <rect key="frame" x="87.5" y="35" width="200" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Aga-I5-QYb"/>
-                                    <constraint firstAttribute="width" constant="200" id="avm-Vd-rQ4"/>
-                                </constraints>
-                                <state key="normal" title="Edit your favorite categories">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-x6-UJb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="My Categories" id="49I-8P-dxh">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="8bT-UL-KL6">
+                                            <connections>
+                                                <action selector="deleteCategories:" destination="Cdy-U6-PMB" id="1OF-KY-4NI"/>
+                                                <segue destination="Flr-XW-Q7T" kind="show" id="8S1-C7-5hl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Lkx-k8-qZp">
+                                            <connections>
+                                                <action selector="addCategories:" destination="Cdy-U6-PMB" id="FFa-R9-fxf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lfy-ha-R8I" firstAttribute="top" secondItem="LAh-Cg-GWZ" secondAttribute="bottom" constant="20" id="5n5-wG-12x"/>
+                            <constraint firstItem="5yZ-x6-UJb" firstAttribute="top" secondItem="zBe-RX-cZV" secondAttribute="bottom" id="EYi-g2-cw1"/>
                             <constraint firstItem="lfy-ha-R8I" firstAttribute="leading" secondItem="P30-x7-yvc" secondAttribute="leading" id="Fdr-Ia-Fte"/>
                             <constraint firstAttribute="trailing" secondItem="lfy-ha-R8I" secondAttribute="trailing" id="IoV-W3-lwi"/>
-                            <constraint firstItem="LAh-Cg-GWZ" firstAttribute="centerX" secondItem="P30-x7-yvc" secondAttribute="centerX" id="SIx-Nw-WZQ"/>
-                            <constraint firstItem="pqQ-e7-RLf" firstAttribute="top" secondItem="zBe-RX-cZV" secondAttribute="bottom" constant="15" id="eeg-cr-kj7"/>
+                            <constraint firstItem="lfy-ha-R8I" firstAttribute="top" secondItem="5yZ-x6-UJb" secondAttribute="bottom" id="NgQ-Jz-QR3"/>
+                            <constraint firstAttribute="trailing" secondItem="5yZ-x6-UJb" secondAttribute="trailing" id="PN4-L8-JVQ"/>
+                            <constraint firstItem="5yZ-x6-UJb" firstAttribute="leading" secondItem="P30-x7-yvc" secondAttribute="leading" id="R2v-4t-IgE"/>
                             <constraint firstItem="FG6-ny-q1o" firstAttribute="top" secondItem="lfy-ha-R8I" secondAttribute="bottom" id="mud-74-qnL"/>
-                            <constraint firstItem="LAh-Cg-GWZ" firstAttribute="top" secondItem="zBe-RX-cZV" secondAttribute="bottom" constant="15" id="oD6-3B-RzF"/>
-                            <constraint firstItem="pqQ-e7-RLf" firstAttribute="centerX" secondItem="P30-x7-yvc" secondAttribute="centerX" id="ohQ-if-ZA6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="Lkx-k8-qZp" id="gvt-sV-hXj"/>
                         <outlet property="categoryTableView" destination="lfy-ha-R8I" id="vem-iB-2Lo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFF-A5-xsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="2633"/>
+            <point key="canvasLocation" x="1109.5999999999999" y="2632.5337331334335"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aIV-3N-fE3">
@@ -596,6 +597,7 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="8S1-C7-5hl"/>
         <segue reference="ZPP-Y4-AAB"/>
     </inferredMetricsTieBreakers>
 </document>
