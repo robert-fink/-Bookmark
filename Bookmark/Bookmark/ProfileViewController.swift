@@ -40,7 +40,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // This return over 2,000 file should only be 53
-        print("This is from number of rows in sections\(favoriteCategories.count)")
         return favoriteCategories.count
     }
     
@@ -91,7 +90,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 // TODO: I dont get this
 //                favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest()) as! [NYTCategory]
                 favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest())
-                print("This is the getFavoriteCategories\(favoriteCategories.count)")
                 
             } catch {
                 print("Favorite categories core data fetch request failed.\n")
