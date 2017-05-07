@@ -10,56 +10,35 @@ import UIKit
 
 class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    // removed Combined Print and E-Book Fiction","Combined Print and E-Book Nonfiction"
-    var categories: [String] = ["Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var categoryTableView: UITableView!
+    
+    var categories: [String] = ["Combined Print and E-Book Fiction", "Combined Print and E-Book Nonfiction", "Advice How-To and Miscellaneous","Chapter Books","Childrens Middle Grade","Picture Books","Series Books","Young Adult","Hardcover Graphic Books","Paperback Graphic Books","Manga","Animals","Business Books","Celebrities","Crime and Punishment","Culture","Education","Espionage","Expeditions Disasters and Adventures","Fashion Manners and Customs","Food and Fitness","Games and Activities","Hardcover Business Books","Health","Humor","Indigenous Americans","Relationships","Paperback Business Books","Family","Hardcover Political Books","Race and Civil Rights","Religion Spirituality and Faith","Science","Sports","Travel"]
     
     var favoriteCategories: [FavoriteCategory] = []
     
     var favoriteCategoriesAsStrings: [String] {
-//        print("In favorite categories as strings")
-        var tempArray: [String] = []
-//        print(favoriteCategories)
+        var stringArray: [String] = []
         for favorite in favoriteCategories {
             if let name = favorite.name {
-                tempArray.append(name)
+                stringArray.append(name)
             }
         }
-//        print(tempArray)
-        return tempArray
+        return stringArray
     }
     
-//    var categoriesMinusFavorites: [String] {
-//        var stringArray: [String] = []
-//        let temp = removeDuplicateCategories(array1: favoriteCategoriesAsStrings, array2: categories)
-//        print(temp)
-//        print("In categories minus favorites")
-//        for category in temp {
-//            stringArray.append(category)
-//        }
-//        return stringArray
-//    }
-    
     var combinedCategories: [String] {
-//        print("In combined categories")
-//        return favoriteCategoriesAsStrings + categoriesMinusFavorites
         return favoriteCategoriesAsStrings + categories
     }
     
-    @IBOutlet weak var addButton: UIBarButtonItem!
-    @IBOutlet weak var categoryTableView: UITableView!
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         getFavoriteCategories()
-//        removeDuplicateCategories(array1: favoriteCategoriesAsStrings, array2: categories)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func addCategories(_ sender: UIBarButtonItem) {
@@ -92,33 +71,37 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
             count = favoriteCategories.count
         }
         if section == 1 {
-//            count = categoriesMinusFavorites.count
             count = categories.count
-//            print("count: " + "\(categoriesMinusFavorites.count)")
         }
         return count
     }
     
+    // build the tableView cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath)
-//        print("Combined category count: " + "\(combinedCategories.count)")
-        print("Count: \(favoriteCategories.count)")
-        print(favoriteCategories)
-//        if favoriteCategoriesAsStrings.count < indexPath.row {
+//        print("indexPath.row: \(indexPath.row)")
+//        print("Favorite categories count: \(favoriteCategories.count)")
+//        print("Favorite categories as strings count: \(favoriteCategoriesAsStrings.count)")
+//        print("categories count: \(categories.count)")
+//        print("Combined categories count: \(combinedCategories.count)")
+        
+//        if indexPath.row < favoriteCategoriesAsStrings.count {
 //            cell.textLabel?.text = favoriteCategoriesAsStrings[indexPath.row]
 //        } else {
 //            cell.textLabel?.text = categories[indexPath.row]
 //        }
+        
         cell.textLabel?.text = combinedCategories[indexPath.row]
         return cell
     }
     
-     // Override to support conditional editing of the table view.
+     // support conditional editing of the table view.
      func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
          // Return false if you do not want the specified item to be editable.
          return true
      }
     
+    // set editing style for sections
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         if indexPath.section == 0 {
             return .delete
@@ -128,7 +111,7 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
 
     }
     
-     // Override to support editing the table view.
+     // support editing the table view.
      func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
          if editingStyle == .delete {
             // Delete the row from the data source
@@ -137,12 +120,10 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
                 context.delete(favoriteCategories[indexPath.row])
                     
                 (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-
+                
+                favoriteCategories.remove(at: indexPath.row)
                 tableView.reloadData()
             }
-//            categories.append(favoriteCategoriesAsStrings[indexPath.row])
-            favoriteCategories.remove(at: indexPath.row)
-            tableView.reloadData()
             
          } else if editingStyle == .insert {
             // Handle adding a favorite category
@@ -174,36 +155,13 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
     
     func getFavoriteCategories() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            print("checkpoint")
             do {
-                // TODO: I dont get this
                 favoriteCategories = try context.fetch(FavoriteCategory.fetchRequest())
-                
             } catch {
                 print("Favorite categories core data fetch request failed.\n")
             }
         }
     }
-    
-    func removeDuplicateCategories(array1: [String], array2: [String]) -> Set<String> {
-//        var noDuplicatesArray: [String] = []
-        var noDuplicatesSet: Set<String> = []
-        for a in array2 {
-            noDuplicatesSet.insert(a)
-        }
-//        print(noDuplicatesSet)
-//        for array in array2 {
-//            print(array)
-//            for ar1 in array1 {
-//                if array.contains(ar1) {
-//                    noDuplicatesSet.insert(array)
-//                }
-//            }
-//        }
-//        print(array2)
-        return noDuplicatesSet
-    }
-    
     
     
     /*
@@ -220,15 +178,6 @@ class EditFavoriteCategoriesViewController: UIViewController, UITableViewDataSou
      return true
      }
      */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
 
 }
