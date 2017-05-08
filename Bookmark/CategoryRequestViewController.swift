@@ -1,27 +1,37 @@
 //
-//  MainTabBarController.swift
+//  CategoryRequestViewController.swift
 //  Bookmark
 //
-//  Created by Admin on 5/5/17.
+//  Created by Admin on 5/7/17.
 //  Copyright © 2017 Fink, Robert. All rights reserved.
 //
 
 import UIKit
 
-class MainTabBarController: UITabBarController {
+class CategoryRequestViewController: UIViewController {
+    
+    var category: FavoriteCategory?
 
+    @IBOutlet weak var categoryLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCategory()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
+    func getCategory() {
+        if let category = category {
+            if let name = category.name {
+                categoryLabel.text = name
+                print("Category: " + name)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

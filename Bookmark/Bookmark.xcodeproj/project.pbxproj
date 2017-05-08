@@ -30,7 +30,6 @@
 		41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */; };
 		8490C2EA1EB92664004A3390 /* EditFavoriteCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */; };
 		8490C2EC1EB92C07004A3390 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */; };
-		84AC5E6F1EBD2A4100930CEE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */; };
 		84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15671EAD9ED500C49414 /* AppDelegate.swift */; };
 		84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF15691EAD9ED500C49414 /* ViewController.swift */; };
 		84CF156D1EAD9ED500C49414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF156B1EAD9ED500C49414 /* Main.storyboard */; };
@@ -45,6 +44,8 @@
 		84D183C01EBEA43A003D3ABE /* FavoriteBook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D183BA1EBEA43A003D3ABE /* FavoriteBook+CoreDataProperties.swift */; };
 		84D183C11EBEA43A003D3ABE /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D183BB1EBEA43A003D3ABE /* Profile+CoreDataClass.swift */; };
 		84D183C21EBEA43A003D3ABE /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D183BC1EBEA43A003D3ABE /* Profile+CoreDataProperties.swift */; };
+		84D183C41EBFD4AF003D3ABE /* BrowseBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D183C31EBFD4AF003D3ABE /* BrowseBookViewController.swift */; };
+		84D183C81EBFEBC7003D3ABE /* CategoryRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D183C71EBFEBC7003D3ABE /* CategoryRequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,16 +80,15 @@
 		350579931EBE5DA200C285B8 /* NYTCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTCategory.swift; sourceTree = "<group>"; };
 		35A674581EBD63B9002457B5 /* NYTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTTabBarController.swift; sourceTree = "<group>"; };
 		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
-		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Bookmark/ProfileViewController.swift; sourceTree = "<group>"; };
 		4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookCollectiveView.swift; path = Bookmark/MyBookCollectiveView.swift; sourceTree = "<group>"; };
 		4162AD811EB511AA00AA8D3B /* MyBookListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookListView.swift; path = Bookmark/MyBookListView.swift; sourceTree = "<group>"; };
 		4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookViewController.swift; path = Bookmark/MyBookViewController.swift; sourceTree = "<group>"; };
 		4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableViewController.swift; path = Bookmark/ListViewTableViewController.swift; sourceTree = "<group>"; };
 		41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableViewCell.swift; path = Bookmark/ListViewTableViewCell.swift; sourceTree = "<group>"; };
 		41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableView.swift; path = Bookmark/ListViewTableView.swift; sourceTree = "<group>"; };
-		8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditFavoriteCategoriesViewController.swift; sourceTree = "<group>"; };
-		8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditFavoriteCategoriesViewController.swift; path = Bookmark/EditFavoriteCategoriesViewController.swift; sourceTree = "<group>"; };
+		8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = Bookmark/EditProfileViewController.swift; sourceTree = "<group>"; };
 		84CF15641EAD9ED500C49414 /* Bookmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF15671EAD9ED500C49414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84CF15691EAD9ED500C49414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +109,8 @@
 		84D183BA1EBEA43A003D3ABE /* FavoriteBook+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FavoriteBook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		84D183BB1EBEA43A003D3ABE /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		84D183BC1EBEA43A003D3ABE /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84D183C31EBFD4AF003D3ABE /* BrowseBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseBookViewController.swift; sourceTree = "<group>"; };
+		84D183C71EBFEBC7003D3ABE /* CategoryRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRequestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,11 @@
 				2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */,
 				2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */,
 				35A674581EBD63B9002457B5 /* NYTTabBarController.swift */,
+				41119C821EB11483006D059B /* ProfileViewController.swift */,
+				8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */,
+				8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */,
+				84D183C31EBFD4AF003D3ABE /* BrowseBookViewController.swift */,
+				84D183C71EBFEBC7003D3ABE /* CategoryRequestViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -237,10 +244,6 @@
 				84CF15711EAD9ED500C49414 /* Assets.xcassets */,
 				41119C801EB10E3C006D059B /* pictures */,
 				84CF15761EAD9ED500C49414 /* Info.plist */,
-				41119C821EB11483006D059B /* ProfileViewController.swift */,
-				8490C2E91EB92664004A3390 /* EditFavoriteCategoriesViewController.swift */,
-				8490C2EB1EB92C07004A3390 /* EditProfileViewController.swift */,
-				84AC5E6E1EBD2A4100930CEE /* MainTabBarController.swift */,
 			);
 			path = Bookmark;
 			sourceTree = "<group>";
@@ -501,7 +504,6 @@
 			files = (
 				4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */,
 				84CF15701EAD9ED500C49414 /* Bookmark.xcdatamodeld in Sources */,
-				84AC5E6F1EBD2A4100930CEE /* MainTabBarController.swift in Sources */,
 				2C53E1151EB7A6A900963D20 /* ProfileVC.swift in Sources */,
 				35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */,
 				2C53E1171EB7A6A900963D20 /* BrowseBookVC.swift in Sources */,
@@ -510,7 +512,9 @@
 				4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */,
 				2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */,
 				2C53E1161EB7A6A900963D20 /* HomeVC.swift in Sources */,
+				84D183C41EBFD4AF003D3ABE /* BrowseBookViewController.swift in Sources */,
 				41119C831EB11483006D059B /* ProfileViewController.swift in Sources */,
+				84D183C81EBFEBC7003D3ABE /* CategoryRequestViewController.swift in Sources */,
 				2C53E1101EB7A61300963D20 /* NYTBestSellerModel.swift in Sources */,
 				4162AD841EB511EF00AA8D3B /* MyBookViewController.swift in Sources */,
 				41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */,
