@@ -25,7 +25,7 @@ class NYTBookFavoriteCV: UICollectionViewCell {
         _ = URLSession.shared
         let isbn = self.nytfavCategory.bookISBN13
         let urlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)")
-
+        
         let task = URLSession.shared.dataTask(with: urlString!) { (data, response, error) in
             
             if error != nil {
@@ -50,27 +50,25 @@ class NYTBookFavoriteCV: UICollectionViewCell {
                                     //
                                     //        // Create a image from the imageData
                                     let image = UIImage(data: imageData)
-                                    self.favBookImage.image = image
+                                    //self.favBookImage.image = image
                                     
-                                    
+                                    DispatchQueue.main.sync(execute:  {
+                                        self.favBookImage.image = image
+                                    })
                                 }
                             }
                             
-                        }
-                        DispatchQueue.main.sync {
                             
-
-                            
+                            //print(json)
                         }
-                        
-                        
                         
                     } catch {
-                        print("JSON error")
+                        print("JSON Error")
                     }
                 }
             }
         }
         task.resume()
+        
     }
 }
