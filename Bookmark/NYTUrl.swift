@@ -29,41 +29,7 @@ class NYTUrl {
         return url
     }
     
-//    func getBookData() {
-//        buildBookURL()
-//        print("This is the from getbookData\(urlContent)")
-//        
-//    }
-//    
-//    func buildBookURL() {
-//        
-//        let NYT_BEST_SELLER = "https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=c0eb75956bc54185ab23677cd6dd4970"
-//        let urlPath = URL(string: NYT_BEST_SELLER)!
-//        let urlRequest = URLRequest(url: urlPath)
-//        
-//        let task = URLSession.shared.dataTask(with: urlRequest) {
-//            (data, response, error) in
-//            if error != nil {
-//                print(error!)
-//            } else {
-//                if let content = data {
-//                    DispatchQueue.main.sync(execute: {
-//                        self.urlContent = content
-//                        //print(self.urlContent)
-//                    })
-////                    do {
-////                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers)
-////                        print(jsonResult)
-////                    } catch {
-////                        print("error")
-////                    }
-//                }
-//            }
-//        }
-//        task.resume()
-//        //return NYT_BEST_SELLER
-//
-//    }
+
 
     
 }
