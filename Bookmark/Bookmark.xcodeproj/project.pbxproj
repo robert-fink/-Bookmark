@@ -16,15 +16,15 @@
 		2C53E1181EB7A6A900963D20 /* NYTBestSellerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */; };
 		2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */; };
 		2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */; };
+		2D5791E31EC22250008E7FA6 /* MyBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */; };
+		2D5791E51EC22297008E7FA6 /* MyBooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */; };
+		2D5791E71EC24415008E7FA6 /* MyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */; };
 		350579941EBE5DA200C285B8 /* NYTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350579931EBE5DA200C285B8 /* NYTCategory.swift */; };
 		3537D7BD1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537D7BC1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift */; };
 		35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A674581EBD63B9002457B5 /* NYTTabBarController.swift */; };
 		35FB2F231EC19E6800B6CD99 /* extra.txt in Resources */ = {isa = PBXBuildFile; fileRef = 35FB2F221EC19E6800B6CD99 /* extra.txt */; };
 		41119C811EB10E3C006D059B /* pictures in Resources */ = {isa = PBXBuildFile; fileRef = 41119C801EB10E3C006D059B /* pictures */; };
 		41119C831EB11483006D059B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41119C821EB11483006D059B /* ProfileViewController.swift */; };
-		4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */; };
-		4162AD821EB511AA00AA8D3B /* MyBookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD811EB511AA00AA8D3B /* MyBookListView.swift */; };
-		4162AD841EB511EF00AA8D3B /* MyBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */; };
 		41721D6F1EC0BBC9000C7BBA /* MyFavoriteBooksDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41721D6E1EC0BBC9000C7BBA /* MyFavoriteBooksDetailViewController.swift */; };
 		4188DC741EB6751600D969B1 /* ListViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */; };
 		41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */; };
@@ -77,15 +77,15 @@
 		2C53E1141EB7A6A900963D20 /* NYTBestSellerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBestSellerVC.swift; sourceTree = "<group>"; };
 		2C9DD6761EB908BA00F7502C /* NYTBookFavoriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteVC.swift; sourceTree = "<group>"; };
 		2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteCV.swift; sourceTree = "<group>"; };
+		2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksViewController.swift; path = Bookmark/MyBooksViewController.swift; sourceTree = "<group>"; };
+		2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksCollectionView.swift; path = Bookmark/MyBooksCollectionView.swift; sourceTree = "<group>"; };
+		2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksCollectionViewCell.swift; path = Bookmark/MyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		350579931EBE5DA200C285B8 /* NYTCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTCategory.swift; sourceTree = "<group>"; };
 		3537D7BC1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYT_FavoriteCateogryBookModel.swift; sourceTree = "<group>"; };
 		35A674581EBD63B9002457B5 /* NYTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTTabBarController.swift; sourceTree = "<group>"; };
 		35FB2F221EC19E6800B6CD99 /* extra.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = extra.txt; sourceTree = "<group>"; };
 		41119C801EB10E3C006D059B /* pictures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pictures; sourceTree = "<group>"; };
 		41119C821EB11483006D059B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Bookmark/ProfileViewController.swift; sourceTree = "<group>"; };
-		4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookCollectiveView.swift; path = Bookmark/MyBookCollectiveView.swift; sourceTree = "<group>"; };
-		4162AD811EB511AA00AA8D3B /* MyBookListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookListView.swift; path = Bookmark/MyBookListView.swift; sourceTree = "<group>"; };
-		4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBookViewController.swift; path = Bookmark/MyBookViewController.swift; sourceTree = "<group>"; };
 		41721D6E1EC0BBC9000C7BBA /* MyFavoriteBooksDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFavoriteBooksDetailViewController.swift; sourceTree = "<group>"; };
 		4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableViewController.swift; path = Bookmark/ListViewTableViewController.swift; sourceTree = "<group>"; };
 		41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewTableViewCell.swift; path = Bookmark/ListViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -172,10 +172,11 @@
 		2C53E1091EB7A59F00963D20 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4162AD7F1EB5114A00AA8D3B /* MyBookCollectiveView.swift */,
-				4162AD811EB511AA00AA8D3B /* MyBookListView.swift */,
 				41CBAD191EB14C070032F573 /* ListViewTableViewCell.swift */,
 				4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */,
+				2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */,
+				2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */,
+				2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */,
 				41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */,
 				2C53E10D1EB7A60500963D20 /* NYTBestSellerCV.swift */,
 				2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */,
@@ -187,7 +188,6 @@
 		2C53E10A1EB7A5A700963D20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4162AD831EB511EF00AA8D3B /* MyBookViewController.swift */,
 				2C53E1111EB7A6A900963D20 /* ProfileVC.swift */,
 				2C53E1121EB7A6A900963D20 /* HomeVC.swift */,
 				2C53E1131EB7A6A900963D20 /* BrowseBookVC.swift */,
@@ -506,17 +506,17 @@
 				41721D6F1EC0BBC9000C7BBA /* MyFavoriteBooksDetailViewController.swift in Sources */,
 				2C53E10C1EB7A5BF00963D20 /* NYTUrl.swift in Sources */,
 				84CF156A1EAD9ED500C49414 /* ViewController.swift in Sources */,
-				4162AD801EB5114A00AA8D3B /* MyBookCollectiveView.swift in Sources */,
 				2C9DD6771EB908BA00F7502C /* NYTBookFavoriteVC.swift in Sources */,
+				2D5791E51EC22297008E7FA6 /* MyBooksCollectionView.swift in Sources */,
 				2C53E1161EB7A6A900963D20 /* HomeVC.swift in Sources */,
 				84D183C41EBFD4AF003D3ABE /* BrowseBookViewController.swift in Sources */,
 				41119C831EB11483006D059B /* ProfileViewController.swift in Sources */,
 				84D183C81EBFEBC7003D3ABE /* CategoryRequestViewController.swift in Sources */,
 				2C53E1101EB7A61300963D20 /* NYTBestSellerModel.swift in Sources */,
-				4162AD841EB511EF00AA8D3B /* MyBookViewController.swift in Sources */,
 				41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */,
 				41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */,
 				2C53E10E1EB7A60500963D20 /* NYTBestSellerCV.swift in Sources */,
+				2D5791E71EC24415008E7FA6 /* MyBooksCollectionViewCell.swift in Sources */,
 				2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */,
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 				84D183BE1EBEA43A003D3ABE /* FavoriteCategory+CoreDataProperties.swift in Sources */,
@@ -524,8 +524,8 @@
 				8490C2EA1EB92664004A3390 /* EditFavoriteCategoriesViewController.swift in Sources */,
 				84D183C21EBEA43A003D3ABE /* Profile+CoreDataProperties.swift in Sources */,
 				84D183C01EBEA43A003D3ABE /* FavoriteBook+CoreDataProperties.swift in Sources */,
+				2D5791E31EC22250008E7FA6 /* MyBooksViewController.swift in Sources */,
 				350579941EBE5DA200C285B8 /* NYTCategory.swift in Sources */,
-				4162AD821EB511AA00AA8D3B /* MyBookListView.swift in Sources */,
 				8490C2EC1EB92C07004A3390 /* EditProfileViewController.swift in Sources */,
 				84D183BF1EBEA43A003D3ABE /* FavoriteBook+CoreDataClass.swift in Sources */,
 				41D86C4D1EC044AA008BC983 /* MyFavoriteBooksDetalTableViewController.swift in Sources */,
