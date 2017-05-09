@@ -42,7 +42,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.391981"
+                  timestampString = "515954077.67846"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -57,7 +57,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.393573"
+                  timestampString = "515954077.680484"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -72,7 +72,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.395734"
+                  timestampString = "515954077.682355"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -87,7 +87,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.397352"
+                  timestampString = "515954077.684088"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -102,7 +102,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.398647"
+                  timestampString = "515954077.68553"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -117,7 +117,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.399874"
+                  timestampString = "515954077.686993"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -132,7 +132,7 @@
                   moduleName = "Bookmark"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lionsgold/Desktop/-Bookmark/Bookmark/Bookmark/ListViewTableViewController.swift"
-                  timestampString = "515276016.40111"
+                  timestampString = "515954077.688303"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -140,6 +140,22 @@
                   offsetFromSymbolStart = "105">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyFavoriteBooksDetailViewController.swift"
+            timestampString = "515954076.61235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MyFavoriteBooksDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

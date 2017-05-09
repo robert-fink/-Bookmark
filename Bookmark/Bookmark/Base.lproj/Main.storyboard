@@ -10,6 +10,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--My Favorite Books Detail View Controller-->
+        <scene sceneID="7Es-jy-AZT">
+            <objects>
+                <viewController id="x0H-0N-jLQ" customClass="MyFavoriteBooksDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uid-PA-Jc7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rb4-U5-DnV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q1c-Z5-sGs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-qq-aF5">
+                                <rect key="frame" x="16" y="20" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASv-fE-FPp">
+                                <rect key="frame" x="16" y="64" width="343" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-fg-wTe">
+                                <rect key="frame" x="16" y="119" width="343" height="346.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="8M7-p3-rER">
+                                <rect key="frame" x="16" y="474" width="343" height="103"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuJ-47-eyl">
+                                <rect key="frame" x="108" y="584" width="158" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Buy On Amazon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F7F-qq-aF5" firstAttribute="leading" secondItem="Q1c-Z5-sGs" secondAttribute="leadingMargin" id="4oP-mZ-vj2"/>
+                            <constraint firstItem="ASv-fE-FPp" firstAttribute="centerX" secondItem="Q1c-Z5-sGs" secondAttribute="centerX" id="71Z-ih-1XL"/>
+                            <constraint firstItem="nuJ-47-eyl" firstAttribute="centerX" secondItem="Q1c-Z5-sGs" secondAttribute="centerX" id="EBZ-ET-WDJ"/>
+                            <constraint firstItem="F7F-qq-aF5" firstAttribute="centerX" secondItem="Q1c-Z5-sGs" secondAttribute="centerX" id="IOV-lI-by8"/>
+                            <constraint firstItem="F7F-qq-aF5" firstAttribute="trailing" secondItem="Q1c-Z5-sGs" secondAttribute="trailingMargin" id="cgE-aS-5cf"/>
+                            <constraint firstItem="8M7-p3-rER" firstAttribute="centerX" secondItem="Q1c-Z5-sGs" secondAttribute="centerX" id="ltx-Yf-ro3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8M7-p3-rER" secondAttribute="trailing" id="qo4-Rl-rRL"/>
+                            <constraint firstItem="hxU-fg-wTe" firstAttribute="centerX" secondItem="Q1c-Z5-sGs" secondAttribute="centerX" id="yCV-1T-xgc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="ASv-fE-FPp" id="b6X-L6-pi6"/>
+                        <outlet property="descriptionLabel" destination="F7F-qq-aF5" id="1EN-jp-UM9"/>
+                        <outlet property="descriptionTextView" destination="8M7-p3-rER" id="LRy-zW-i6v"/>
+                        <outlet property="purchaseButton" destination="nuJ-47-eyl" id="TPw-eb-B2D"/>
+                        <outlet property="titleLabel" destination="F7F-qq-aF5" id="YEp-eK-U2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wzz-ij-fJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2364" y="1425.3373313343329"/>
+        </scene>
         <!--Browse Book View Controller-->
         <scene sceneID="nyU-Eh-OHn">
             <objects>
@@ -507,7 +570,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -621,6 +684,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8S1-C7-5hl"/>
+        <segue reference="Ygm-1Z-ccI"/>
     </inferredMetricsTieBreakers>
 </document>
