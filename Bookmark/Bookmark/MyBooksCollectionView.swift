@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MyBooksCollectionView: UICollectionView{
+class MyBooksCollectionView: UICollectionView {
 
 }

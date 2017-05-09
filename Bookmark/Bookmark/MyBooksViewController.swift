@@ -49,15 +49,24 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == "showFavoriteBookSegue" else { return }
-        if let destination = segue.destination as? MyFavoriteBooksDetailViewController,
-            let indexPath = collectionViewOutlet.indexPathsForSelectedItems,
-            let row = collectionViewOutlet.indexPathsForSelectedItems{
-            print(indexPath)
-//            collectionViewOutlet.deselectRow(at: indexPath, animated: true)
-//            destination.category = categories[row]
+        if segue.identifier == "mybooksdetailsegue" {
+            let destination = segue.destination as! FavoriteBookDetailViewController
+            //let indexPath = sender as! NSIndexPath
+            //let selectedRow = favoriteBooksCollection[indexPath.row]
+            //destination.authorLabel.text = selectedRow.author
+            //destination.descriptionTextView.text = selectedRow.bookDescription
+            //destination.titleLabel.text = selectedRow.title
+            destination.authorSegue = "TestAuthor"
+            destination.descriptionSegue = "Lorem ipsum blah"
+            destination.titleSegue = "Book TM"
+            destination.title? = "Testing Book Title up here"
         }
     }
+    
+    // Set the indexPath of the selected item as the sender for the segue
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "mybooksdetailsegue", sender: indexPath)
+//    }
     
     func getFavoriteBooks(){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
