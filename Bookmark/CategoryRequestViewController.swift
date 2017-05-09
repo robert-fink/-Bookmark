@@ -63,10 +63,13 @@ class CategoryRequestViewController: UIViewController, UICollectionViewDataSourc
     func parseFavoriteCategoryJSON() {
         
         _ = URLSession.shared
-        //let categoryName = category?.name as? String
-        let urlString = URL(string: NYT_FAV_BOOK_CATEGORY)
+        let categoryName = category?.name as! String
+        //let urlString = URL(string: NYT_FAV_BOOK_CATEGORY)
+        var components = URLComponents()
+        let url = "https://api.nytimes.com/svc/books/v3/lists//.json?list-name=\(categoryName)&api-key=c0eb75956bc54185ab23677cd6dd4970"
+        let encoded = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         //let urlString = NYTUrl.sharedInstance.buildCateogryURL(category: categoryName)
-        //let urlString = "https://api.nytimes.com/svc/books/v3/lists//.json?list-name=\(categoryName)&api-key=c0eb75956bc54185ab23677cd6dd4970"
+        let urlString = URL(string: encoded!)
         //print(urlString)
         //let request = URL(string: urlString)
         //print(request)
@@ -86,9 +89,6 @@ class CategoryRequestViewController: UIViewController, UICollectionViewDataSourc
                                         //print("Element: \(element)")
                                         let bookModel = NYT_FavoriteCateogryBookModel(Lists: obj, BookDetails: element)
                                         self.favoriteBooks.append(bookModel)
-//                                        for obj in self.favoriteBooks {
-//                                            print(obj.bookAuthor)
-//                                        }
                                         
                                     }
                                 }
