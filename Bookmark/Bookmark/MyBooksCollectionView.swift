@@ -1,14 +1,14 @@
 //
-//  MyBookCollectiveView.swift
+//  MyBooksCollectionView.swift
 //  Bookmark
 //
-//  Created by Leo Kim on 4/29/17.
+//  Created by Dale Brauer on 5/9/17.
 //  Copyright © 2017 Fink, Robert. All rights reserved.
 //
 
 import UIKit
 
-class MyBookCollectiveView: UIView {
+class MyBooksCollectionView: UICollectionView {
 
     /*
     // Only override draw() if you perform custom drawing.
