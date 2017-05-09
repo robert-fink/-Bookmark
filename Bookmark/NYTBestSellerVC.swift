@@ -12,6 +12,8 @@ import UIKit
 
 class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var myCollectionView: UICollectionView!
+    
     var nytBestSeller = NYTBestSellerModel()
     var books = [NYTBestSellerModel]()
     var bookmodelCell: NYTBestSellerModel!
@@ -19,13 +21,8 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //This is how I am reading in the books
-        books = nytBestSeller.loadJSON(fileName: "NYTimeBestSeller")
-//        for obj in books {
-//            print(obj.bookListName)
-//            print(obj.bookImage)
-//            
-//        }
+        parseBestSellerJSON()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,8 +42,6 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as? NYTBestSellerCV {
             let bookmodelCell = books[indexPath.row]
             cell.configureCellForBookObj(nytBestSellerBookModel: bookmodelCell)
-            //cell.backgroundColor = .clearColor
-            // make cell more visible in our example project
 
             return cell
             
@@ -56,26 +51,54 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
         }
     }
     
-    
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        // TODO: Send over through segue
-        //var book: NYTBestSellerModel!
-        //book = books[indexPath.row]
+
         print("You selected cell #\(indexPath.item)!")
-        //performSegue(withIdentifier: "NYTBookFavoriteVC", sender: book)
+        //print(books[indexPath.item].bookListName)
+
+    }
+    
+    func parseBestSellerJSON() {
+        
+        _ = URLSession.shared
+        let request = URL(string: NYT_BEST_SELLER)
+        let task = URLSession.shared.dataTask(with: request!) { (data, response, error) in
+            
+            if error != nil {
+                print(error!)
+            } else {
+                
+                if let urlContent = data {
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject> {
+                            let root =  json
+                            if let results = root["results"] as? Dictionary<String, AnyObject> {
+                                if let lists = results["lists"] as? [Dictionary<String, AnyObject>] {
+                                    for obj in lists {
+                                        for element in (obj["books"] as? [Dictionary<String, AnyObject>])!{
+                                            let bookModel = NYTBestSellerModel(bookDict: element, listDict: obj)
+                                            self.books.append(bookModel)
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            DispatchQueue.main.sync {
+                                
+                                self.myCollectionView.reloadData()
+                                
+                            }
+                        }
+                        
+                        
+                    } catch {
+                        print("JSON error")
+                    }
+                }
+            }
+        }
+        task.resume()
     }
 
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "NYTBookFavoriteVC" {
-//            if let detailsVC = segue.destination as? NYTBookFavoriteVC {
-//                if let book = sender as? NYTBestSellerModel {
-//                    detailsVC.nytBestSellerModel = book
-//                    //detailsVC.pokemon = poke
-//                }
-//            }
-//        }
-//    }
 }

@@ -21,9 +21,35 @@ class NYTBestSellerModel {
     var _bookRank: Int!
     var _bookRankLastWeek: Int!
     var _bookWeekOnList: Int!
+    var _bookTitle: String!
+    var _bookISBN10: String!
+    var _bookISBN13: String!
     typealias JSONStandard = Dictionary<String, AnyObject>
-
     
+    var bookISBN10: String {
+        if _bookISBN10 == nil {
+            _bookISBN10 = ""
+        }
+        
+        return _bookISBN10
+    }
+    
+    var bookISBN13: String {
+        if _bookISBN13 == nil {
+            _bookISBN13 = ""
+        }
+        
+        return _bookISBN13
+    }
+    
+    var bookTitle: String {
+        if _bookTitle == nil {
+            _bookTitle = ""
+        }
+        
+        return _bookTitle
+    }
+
     var bookListName: String {
         if _bookListName == nil {
             _bookListName = ""
@@ -141,32 +167,41 @@ class NYTBestSellerModel {
         if let bookRank = bookDict["rank"] as? Int{
             self._bookRank = bookRank
         }
+        if let bookTitle = bookDict["title"] as? String{
+            self._bookTitle = bookTitle
+        }
+        if let bookISBN10 = bookDict["primary_isbn10"] as? String{
+            self._bookISBN10 = bookISBN10
+        }
+        if let bookISBN13 = bookDict["primary_isbn13"] as? String{
+            self._bookISBN13 = bookISBN13
+        }
     }
     
-    func loadJSON(fileName: String) -> [NYTBestSellerModel] {
-        var books = [NYTBestSellerModel]()
-        if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
-            let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
-            books = parseJSON(data)
-        }
-        return books
-    }
-    
-    func parseJSON(_ data: Data) -> [NYTBestSellerModel] {
-        
-        var books = [NYTBestSellerModel]()
-        
-        if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-            let root = json as? Dictionary<String, AnyObject>
-            let results = root?["results"] as? Dictionary<String, AnyObject>
-            let lists = results?["lists"] as? [Dictionary<String, AnyObject>]
-            for resultsObject in lists! {
-                for element in (resultsObject["books"] as? [Dictionary<String, AnyObject>])! {
-                    let bookModel = NYTBestSellerModel(bookDict: element, listDict: resultsObject)
-                    books.append(bookModel)
-                }
-            }
-        }
-        return books
-    }
+//    func loadJSON(fileName: String) -> [NYTBestSellerModel] {
+//        var books = [NYTBestSellerModel]()
+//        if let path = Bundle.main.path(forResource: fileName, ofType: "json"),
+//            let data = try? Data(contentsOf: URL(fileURLWithPath: path)) {
+//            books = parseJSON(data)
+//        }
+//        return books
+//    }
+//    
+//    func parseJSON(_ data: Data) -> [NYTBestSellerModel] {
+//        
+//        var books = [NYTBestSellerModel]()
+//        
+//        if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+//            let root = json as? Dictionary<String, AnyObject>
+//            let results = root?["results"] as? Dictionary<String, AnyObject>
+//            let lists = results?["lists"] as? [Dictionary<String, AnyObject>]
+//            for resultsObject in lists! {
+//                for element in (resultsObject["books"] as? [Dictionary<String, AnyObject>])! {
+//                    let bookModel = NYTBestSellerModel(bookDict: element, listDict: resultsObject)
+//                    books.append(bookModel)
+//                }
+//            }
+//        }
+//        return books
+//    }
 }

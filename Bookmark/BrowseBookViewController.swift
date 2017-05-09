@@ -21,6 +21,7 @@ class BrowseBookViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getCategories()
+
         browseTableView.reloadData()
     }
 
