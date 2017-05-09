@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="1424.4377811094455"/>
         </scene>
-        <!--Browse Book View Controller-->
+        <!--Browse Books-->
         <scene sceneID="nyU-Eh-OHn">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bwi-Ff-jzw" customClass="BrowseBookViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,17 +80,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWt-oc-iOv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="gbr-XQ-vaU"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Browse Books" id="fnf-Zc-q7m"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I50-vl-xkh">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="cZv-Ln-slp" style="IBUITableViewCellStyleDefault" id="Y0s-zK-00I">
@@ -119,17 +110,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CWt-oc-iOv" firstAttribute="centerX" secondItem="igg-PN-kr7" secondAttribute="centerX" id="Act-Lm-g0j"/>
-                            <constraint firstItem="CWt-oc-iOv" firstAttribute="leading" secondItem="igg-PN-kr7" secondAttribute="leadingMargin" constant="-16" id="K3J-yN-QCB"/>
                             <constraint firstItem="vfW-mv-UWO" firstAttribute="top" secondItem="I50-vl-xkh" secondAttribute="bottom" id="RAv-BR-DzO"/>
-                            <constraint firstItem="CWt-oc-iOv" firstAttribute="top" secondItem="eQW-i8-Xdy" secondAttribute="bottom" id="bBm-uR-kKp"/>
-                            <constraint firstItem="I50-vl-xkh" firstAttribute="top" secondItem="CWt-oc-iOv" secondAttribute="bottom" id="egR-i8-wdP"/>
                             <constraint firstAttribute="trailing" secondItem="I50-vl-xkh" secondAttribute="trailing" id="k4h-LL-FrY"/>
                             <constraint firstItem="I50-vl-xkh" firstAttribute="leading" secondItem="igg-PN-kr7" secondAttribute="leading" id="u7e-dX-wSJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CWt-oc-iOv" secondAttribute="trailing" constant="-16" id="uzy-h2-8EH"/>
+                            <constraint firstItem="I50-vl-xkh" firstAttribute="top" secondItem="eQW-i8-Xdy" secondAttribute="bottom" id="y2Q-pF-0tu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0Mj-vq-reu"/>
+                    <navigationItem key="navigationItem" title="Browse Books" id="0Mj-vq-reu"/>
                     <connections>
                         <outlet property="browseTableView" destination="I50-vl-xkh" id="cTg-em-Mkz"/>
                         <segue destination="fAR-Ss-9bB" kind="show" identifier="showRecommendedBooksSegue" id="511-Tu-sCd"/>
@@ -142,7 +129,7 @@
         <!--Category Request View Controller-->
         <scene sceneID="mNj-hh-hix">
             <objects>
-                <viewController id="fAR-Ss-9bB" customClass="CategoryRequestViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fAR-Ss-9bB" customClass="CategoryRequestViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Lq-lr-Cgj"/>
                         <viewControllerLayoutGuide type="bottom" id="qHM-rU-iwN"/>
@@ -162,7 +149,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SRK-Hs-Sdu">
-                                    <rect key="frame" x="0.0" y="-64" width="375" height="478"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -176,7 +163,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="106" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-qE-Ni4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-qE-Ni4">
                                                     <rect key="frame" x="0.0" y="0.0" width="106" height="77"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -451,7 +438,7 @@
                             <constraint firstAttribute="trailing" secondItem="X0c-Eo-svF" secondAttribute="trailing" id="jdC-GH-A1o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3bV-Jp-ZnR"/>
+                    <navigationItem key="navigationItem" title="Your Books" id="3bV-Jp-ZnR"/>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="X0c-Eo-svF" id="sbw-5H-aes"/>
                     </connections>
@@ -474,7 +461,7 @@
                         <segue destination="wDT-M1-fTH" kind="relationship" relationship="viewControllers" id="Cvq-2k-JTR"/>
                         <segue destination="6vC-QX-H8e" kind="relationship" relationship="viewControllers" id="7h6-yj-5US"/>
                         <segue destination="gEP-Pq-thN" kind="relationship" relationship="viewControllers" id="x5q-fr-mYG"/>
-                        <segue destination="U1j-s2-KR7" kind="relationship" relationship="viewControllers" id="twQ-WG-1sB"/>
+                        <segue destination="u5p-pN-lh4" kind="relationship" relationship="viewControllers" id="twQ-WG-1sB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqG-8v-3VX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -484,7 +471,7 @@
         <!--NYT Best Sellers-->
         <scene sceneID="akQ-Ot-SCp">
             <objects>
-                <viewController id="U1j-s2-KR7" customClass="BestSellerBookVC" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="U1j-s2-KR7" customClass="BestSellerBookVC" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9m7-Lk-chc"/>
                         <viewControllerLayoutGuide type="bottom" id="pq0-cN-QzZ"/>
@@ -493,12 +480,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-R9-VeS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Q6-hK-N15">
-                                <rect key="frame" x="0.0" y="71" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y9P-KU-hOD">
                                     <size key="itemSize" width="100" height="130"/>
@@ -546,24 +529,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9uO-R9-VeS" firstAttribute="top" secondItem="RPg-bu-vPl" secondAttribute="top" id="0YM-pL-s82"/>
-                            <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" constant="51" id="8n2-PY-H7V"/>
-                            <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="9uO-R9-VeS" secondAttribute="bottom" constant="544" id="STd-3f-z7M"/>
+                            <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" id="8n2-PY-H7V"/>
                             <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="7Q6-hK-N15" secondAttribute="bottom" id="evf-Qr-WYq"/>
                             <constraint firstAttribute="trailing" secondItem="7Q6-hK-N15" secondAttribute="trailing" id="h2S-K7-qjQ"/>
-                            <constraint firstAttribute="trailing" secondItem="9uO-R9-VeS" secondAttribute="trailing" id="m0q-mP-KGz"/>
                             <constraint firstItem="7Q6-hK-N15" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="ndQ-K0-KrH"/>
-                            <constraint firstItem="9uO-R9-VeS" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="wnD-hq-SwW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ"/>
+                    <navigationItem key="navigationItem" title="NYT Best Sellers" id="hJX-qu-sJu"/>
                     <connections>
                         <outlet property="myCollectionView" destination="7Q6-hK-N15" id="LqM-CA-dZH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6626.3999999999996" y="428.63568215892059"/>
+            <point key="canvasLocation" x="7565.6000000000004" y="428.63568215892059"/>
         </scene>
         <!--Edit Favorite Categories View Controller-->
         <scene sceneID="k9k-xZ-sRV">
@@ -578,7 +557,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -605,7 +584,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-x6-UJb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </textAttributes>
@@ -665,10 +644,10 @@
             </objects>
             <point key="canvasLocation" x="1110" y="429"/>
         </scene>
-        <!--Browse-->
+        <!--Browse Books-->
         <scene sceneID="Fqr-aH-sJl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gEP-Pq-thN" sceneMemberID="viewController">
+                <navigationController title="Browse Books" automaticallyAdjustsScrollViewInsets="NO" id="gEP-Pq-thN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ky-hG-ssG">
@@ -684,10 +663,10 @@
             </objects>
             <point key="canvasLocation" x="4552.8000000000002" y="715.59220389805103"/>
         </scene>
-        <!--My Books-->
+        <!--Your Books-->
         <scene sceneID="8Gk-UQ-1mg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6vC-QX-H8e" sceneMemberID="viewController">
+                <navigationController title="Your Books" automaticallyAdjustsScrollViewInsets="NO" id="6vC-QX-H8e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wOv-Qg-wl7">
@@ -703,6 +682,25 @@
             </objects>
             <point key="canvasLocation" x="2364" y="715.59220389805103"/>
         </scene>
+        <!--NYT Best Sellers-->
+        <scene sceneID="4VM-8A-8ec">
+            <objects>
+                <navigationController title="NYT Best Sellers" automaticallyAdjustsScrollViewInsets="NO" id="u5p-pN-lh4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="slH-vn-gXg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U1j-s2-KR7" kind="relationship" relationship="rootViewController" id="fAa-Rs-g7Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8M0-I2-MTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6626.3999999999996" y="428.63568215892059"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Books" width="25" height="25"/>
@@ -711,6 +709,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8S1-C7-5hl"/>
+        <segue reference="ZPP-Y4-AAB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,6 @@ import UIKit
 class FavoriteBookDetailViewController: UIViewController {
 
     
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UITextView!
@@ -28,7 +27,6 @@ class FavoriteBookDetailViewController: UIViewController {
 //        titleLabel.text = favoriteBook?.title
 //        authorLabel.text = favoriteBook?.author
 //        descriptionLabel.text = favoriteBook?.bookDescription
-        titleLabel.text = titleSegue
         authorLabel.text = authorSegue
         descriptionLabel.text = descriptionSegue
         bookImage.image = #imageLiteral(resourceName: "Books")
