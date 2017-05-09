@@ -18,6 +18,7 @@
 		2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */; };
 		2D5791E31EC22250008E7FA6 /* MyBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */; };
 		2D5791E51EC22297008E7FA6 /* MyBooksCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */; };
+		2D5791E71EC24415008E7FA6 /* MyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */; };
 		350579941EBE5DA200C285B8 /* NYTCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350579931EBE5DA200C285B8 /* NYTCategory.swift */; };
 		3537D7BD1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3537D7BC1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift */; };
 		35A674591EBD63B9002457B5 /* NYTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A674581EBD63B9002457B5 /* NYTTabBarController.swift */; };
@@ -78,6 +79,7 @@
 		2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTBookFavoriteCV.swift; sourceTree = "<group>"; };
 		2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksViewController.swift; path = Bookmark/MyBooksViewController.swift; sourceTree = "<group>"; };
 		2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksCollectionView.swift; path = Bookmark/MyBooksCollectionView.swift; sourceTree = "<group>"; };
+		2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyBooksCollectionViewCell.swift; path = Bookmark/MyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		350579931EBE5DA200C285B8 /* NYTCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTCategory.swift; sourceTree = "<group>"; };
 		3537D7BC1EC0BF6E00D7267B /* NYT_FavoriteCateogryBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYT_FavoriteCateogryBookModel.swift; sourceTree = "<group>"; };
 		35A674581EBD63B9002457B5 /* NYTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NYTTabBarController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				4188DC731EB6751600D969B1 /* ListViewTableViewController.swift */,
 				2D5791E21EC22250008E7FA6 /* MyBooksViewController.swift */,
 				2D5791E41EC22297008E7FA6 /* MyBooksCollectionView.swift */,
+				2D5791E61EC24415008E7FA6 /* MyBooksCollectionViewCell.swift */,
 				41CBAD1D1EB14D1E0032F573 /* ListViewTableView.swift */,
 				2C53E10D1EB7A60500963D20 /* NYTBestSellerCV.swift */,
 				2C9DD6781EB9098600F7502C /* NYTBookFavoriteCV.swift */,
@@ -513,6 +516,7 @@
 				41CBAD1E1EB14D1E0032F573 /* ListViewTableView.swift in Sources */,
 				41CBAD1A1EB14C070032F573 /* ListViewTableViewCell.swift in Sources */,
 				2C53E10E1EB7A60500963D20 /* NYTBestSellerCV.swift in Sources */,
+				2D5791E71EC24415008E7FA6 /* MyBooksCollectionViewCell.swift in Sources */,
 				2C9DD6791EB9098600F7502C /* NYTBookFavoriteCV.swift in Sources */,
 				84CF15681EAD9ED500C49414 /* AppDelegate.swift in Sources */,
 				84D183BE1EBEA43A003D3ABE /* FavoriteCategory+CoreDataProperties.swift in Sources */,

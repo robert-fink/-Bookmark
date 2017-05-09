@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyBooksViewController: UIViewController {
+class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,26 @@ class MyBooksViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 40
+        //return trip.photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mybookscell", for: indexPath)
+        
+        if let cell = cell as? MyBooksCollectionViewCell {
+            cell.bookImage.image = #imageLiteral(resourceName: "Books")
+            cell.bookTitle.text = "TestTitle"
+        }
+        
+        return cell
     }
     
 
