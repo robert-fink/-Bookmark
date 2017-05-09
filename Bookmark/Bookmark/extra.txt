@@ -33,3 +33,21 @@
 //        //return NYT_BEST_SELLER
 //
 //    }
+//        let isbnImageURL = "https://www.googleapis.com/books/v1/volumes?q=isbn:\(nytfavCategory.bookISBN13)"
+////        let isbnImageURL = "https://covers.openlibrary.org/b/isbn/\(isbn)-S.jpg"
+//        print(isbnImageURL)
+
+
+//
+//        // Display the image in the UImageView
+//        if image == nil {
+//            let imageUrl = URL(string: "https://books.google.com/books/content?id=6s7GDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api")
+//            let imageData = try! Data(contentsOf: imageUrl!)
+//            let image = UIImage(data: imageData)
+//            favBookImage.image = image
+//        }
+//let urlString = NYTUrl.sharedInstance.buildCateogryURL(category: categoryName)
+//let urlString = "https://api.nytimes.com/svc/books/v3/lists//.json?list-name=\(categoryName)&api-key=c0eb75956bc54185ab23677cd6dd4970"
+//print(urlString)
+//let request = URL(string: urlString)
+//print(request)

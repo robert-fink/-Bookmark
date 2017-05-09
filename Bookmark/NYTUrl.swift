@@ -34,10 +34,6 @@ class NYTUrl {
     
 }
 
-// The 'init' function will
-// only be called the first time
-
-
 let apiKey = "c0eb75956bc54185ab23677cd6dd4970"
 let paperBack = "Paperback Books"
 let isbn = 9781423113461
