@@ -10,10 +10,16 @@ import UIKit
 
 class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var favoriteBooksCollection : [FavoriteBook] = []
+    
+    @IBOutlet weak var collectionViewOutlet: MyBooksCollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getFavoriteBooks()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,21 +41,31 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         
         if let cell = cell as? MyBooksCollectionViewCell {
             cell.bookImage.image = #imageLiteral(resourceName: "Books")
-            cell.bookTitle.text = "TestTitle"
+//            cell.bookTitle.text = favoriteBooksCollection[indexPath.row].title
         }
         
         return cell
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard segue.identifier == "showFavoriteBookSegue" else { return }
+        if let destination = segue.destination as? MyFavoriteBooksDetailViewController,
+            let indexPath = collectionViewOutlet.indexPathsForSelectedItems,
+            let row = collectionViewOutlet.indexPathsForSelectedItems{
+            print(indexPath)
+//            collectionViewOutlet.deselectRow(at: indexPath, animated: true)
+//            destination.category = categories[row]
+        }
     }
-    */
-
+    
+    func getFavoriteBooks(){
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            do {
+                favoriteBooksCollection = try context.fetch(FavoriteBook.fetchRequest())
+            } catch {
+                print("Favorite categories core data fetch request failed.\n")
+            }
+        }
+    }
 }

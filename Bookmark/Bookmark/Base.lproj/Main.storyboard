@@ -13,7 +13,7 @@
         <!--Dale Book Detail-->
         <scene sceneID="WjR-Ag-dDJ">
             <objects>
-                <viewController title="Book Detail" id="4t4-VN-4il" userLabel="Dale Book Detail" sceneMemberID="viewController">
+                <viewController title="Book Detail" id="4t4-VN-4il" userLabel="Dale Book Detail" customClass="FavoriteBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MvI-61-UuW"/>
                         <viewControllerLayoutGuide type="bottom" id="vJ7-Fu-vX0"/>
@@ -67,6 +67,11 @@
                             <constraint firstItem="EMv-FY-9cA" firstAttribute="top" secondItem="fy6-TA-fwk" secondAttribute="bottom" constant="8" id="ybd-dU-pOT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="EMv-FY-9cA" id="UpQ-Ai-HL2"/>
+                        <outlet property="descriptionLabel" destination="aA8-Ng-gWw" id="pz5-Ln-puw"/>
+                        <outlet property="titleLabel" destination="fy6-TA-fwk" id="5ly-B4-gtG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aC-B6-ig6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,6 +461,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3bV-Jp-ZnR"/>
+                    <connections>
+                        <outlet property="collectionViewOutlet" destination="X0c-Eo-svF" id="sbw-5H-aes"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNK-2P-vyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
