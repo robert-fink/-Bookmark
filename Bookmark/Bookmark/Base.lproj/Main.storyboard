@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7aC-B6-ig6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2816.8000000000002" y="1424.4377811094455"/>
+            <point key="canvasLocation" x="2393" y="2239"/>
         </scene>
         <!--Browse Book View Controller-->
         <scene sceneID="nyU-Eh-OHn">
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZh-6X-6Rt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3614" y="1426"/>
+            <point key="canvasLocation" x="3289" y="1466"/>
         </scene>
         <!--Category Request View Controller-->
         <scene sceneID="mNj-hh-hix">
@@ -197,6 +197,7 @@
                                         <connections>
                                             <outlet property="favBookImage" destination="rpI-qE-Ni4" id="S34-IN-wTJ"/>
                                             <outlet property="favBookLabel" destination="l4z-jF-Qv7" id="ihP-DJ-lX9"/>
+                                            <segue destination="GOn-39-x7K" kind="show" identifier="recommendedBookDetailSegue" id="dnZ-Dx-va7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -216,13 +217,106 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="zqh-a3-e3D" id="1iE-ce-9AW"/>
                         <outlet property="myCollectionView" destination="zqh-a3-e3D" id="vJg-lL-OsX"/>
                         <outlet property="titleCategory" destination="6yg-Hu-Cdf" id="2hb-19-4SV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFP-6x-R37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3613.5999999999999" y="2161.1694152923542"/>
+            <point key="canvasLocation" x="3289" y="2239"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="T0J-Pq-Bmq">
+            <objects>
+                <viewController id="Y7h-bt-y6d" customClass="NYTDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JBj-0s-mrM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sch-0L-iyt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ve-q6-Eq2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-bR-Mry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4406" y="2239"/>
+        </scene>
+        <!--Recommended Book Detail View Controller-->
+        <scene sceneID="u3d-6T-SRw">
+            <objects>
+                <viewController id="GOn-39-x7K" customClass="RecommendedBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jly-xx-4R4"/>
+                        <viewControllerLayoutGuide type="bottom" id="8mq-Yk-oQc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tgt-ff-gxY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-Fp-nXj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="H2D-4L-n11"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-JY-bnB">
+                                <rect key="frame" x="161.5" y="280" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="beF-z6-A3z">
+                                <rect key="frame" x="26" y="351" width="323" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RHj-I6-VaA"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gL5-HD-J10">
+                                <rect key="frame" x="170.5" y="114" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NYR-uJ-TaM">
+                                <rect key="frame" x="135" y="150" width="105" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="dDC-NH-1h5"/>
+                                    <constraint firstAttribute="height" constant="105" id="lna-m7-7J0"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="beF-z6-A3z" firstAttribute="centerX" secondItem="Tgt-ff-gxY" secondAttribute="centerX" id="052-hN-hoU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="beF-z6-A3z" secondAttribute="trailing" constant="10" id="PRv-V4-gDZ"/>
+                            <constraint firstItem="NYR-uJ-TaM" firstAttribute="top" secondItem="gL5-HD-J10" secondAttribute="bottom" constant="15" id="YlA-7v-wxh"/>
+                            <constraint firstItem="gL5-HD-J10" firstAttribute="centerX" secondItem="Tgt-ff-gxY" secondAttribute="centerX" id="cz2-hJ-Ran"/>
+                            <constraint firstItem="gL5-HD-J10" firstAttribute="top" secondItem="jly-xx-4R4" secondAttribute="bottom" constant="50" id="f9v-Cr-gp3"/>
+                            <constraint firstItem="beF-z6-A3z" firstAttribute="top" secondItem="s3w-JY-bnB" secondAttribute="bottom" constant="50" id="kef-aD-dXX"/>
+                            <constraint firstItem="beF-z6-A3z" firstAttribute="leading" secondItem="Tgt-ff-gxY" secondAttribute="leadingMargin" constant="10" id="mdj-ry-Wxn"/>
+                            <constraint firstItem="s3w-JY-bnB" firstAttribute="centerX" secondItem="Tgt-ff-gxY" secondAttribute="centerX" id="qSY-EF-MvI"/>
+                            <constraint firstItem="s3w-JY-bnB" firstAttribute="top" secondItem="NYR-uJ-TaM" secondAttribute="bottom" constant="25" id="u8D-HJ-HH9"/>
+                            <constraint firstItem="NYR-uJ-TaM" firstAttribute="centerX" secondItem="Tgt-ff-gxY" secondAttribute="centerX" id="vAq-a2-6hh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="author" destination="s3w-JY-bnB" id="6dh-Of-A7b"/>
+                        <outlet property="bookDescription" destination="beF-z6-A3z" id="zvH-xh-fCN"/>
+                        <outlet property="bookTitle" destination="gL5-HD-J10" id="iDt-Qo-523"/>
+                        <outlet property="imageView" destination="NYR-uJ-TaM" id="W4y-gd-dW0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hb-qX-k2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3289" y="3011"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Jle-zO-nRl">
@@ -293,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsF-jQ-HgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="1132"/>
+            <point key="canvasLocation" x="1292" y="1466"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="5JC-Ce-2Zc">
@@ -382,7 +476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTu-zf-aIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="1904"/>
+            <point key="canvasLocation" x="1292" y="2239"/>
         </scene>
         <!--My Books-->
         <scene sceneID="hJ5-h1-2JO">
@@ -481,7 +575,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNK-2P-vyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3303.1999999999998" y="715.59220389805103"/>
+            <point key="canvasLocation" x="2394" y="1466"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wzO-ih-RSf">
@@ -600,7 +694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VOz-BL-tH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7565.6000000000004" y="428.63568215892059"/>
+            <point key="canvasLocation" x="4407" y="1466"/>
         </scene>
         <!--Edit Favorite Categories View Controller-->
         <scene sceneID="k9k-xZ-sRV">
@@ -615,7 +709,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -681,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFF-A5-xsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="2659"/>
+            <point key="canvasLocation" x="1292" y="3012"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Ihw-CB-uN3">
@@ -700,7 +794,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgd-Mw-sKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1110" y="429"/>
+            <point key="canvasLocation" x="1292" y="716"/>
         </scene>
         <!--Browse Books-->
         <scene sceneID="Fqr-aH-sJl">
@@ -719,7 +813,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MYu-0W-ANr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4552.8000000000002" y="715.59220389805103"/>
+            <point key="canvasLocation" x="3289" y="716"/>
         </scene>
         <!--Your Books-->
         <scene sceneID="8Gk-UQ-1mg">
@@ -738,7 +832,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kja-ma-x9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="715.59220389805103"/>
+            <point key="canvasLocation" x="2394" y="716"/>
         </scene>
         <!--NYT Best Sellers-->
         <scene sceneID="4VM-8A-8ec">
@@ -757,7 +851,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8M0-I2-MTc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6626.3999999999996" y="428.63568215892059"/>
+            <point key="canvasLocation" x="4407" y="716"/>
         </scene>
     </scenes>
     <resources>
@@ -768,6 +862,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8S1-C7-5hl"/>
+        <segue reference="Ygm-1Z-ccI"/>
     </inferredMetricsTieBreakers>
 </document>

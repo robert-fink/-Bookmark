@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryRequestViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleCategory: UILabel!
     var category: FavoriteCategory?
     var favoriteCategory = NYT_FavoriteCateogryBookModel()
@@ -51,14 +53,6 @@ class CategoryRequestViewController: UIViewController, UICollectionViewDataSourc
             return UICollectionViewCell()
         }
     }
-    
-        
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
-            print("You selected cell #\(indexPath.item)!")
-            //print(books[indexPath.item].bookListName)
-    }
-
     
     func parseFavoriteCategoryJSON() {
         
@@ -111,14 +105,21 @@ class CategoryRequestViewController: UIViewController, UICollectionViewDataSourc
         task.resume()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        print("checkpoint 1")
+        if segue.identifier == "recommendedBookDetailSegue" {
+            print("checkpoint 2")
+            if let cell = sender as? NYTBookFavoriteCV, let indexPath = collectionView.indexPath(for: cell) {
+                print("checkpoint 3")
+                if let destination = segue.destination as? RecommendedBookDetailViewController {
+                    print("checkpoint 4")
+                    print("\(indexPath.row)")
+                    destination.book = favoriteBooks[indexPath.row]
+                }
+            }
+        }
     }
-    */
+    
 
 }
