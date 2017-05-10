@@ -50,16 +50,19 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mybooksdetailsegue" {
-            let destination = segue.destination as! FavoriteBookDetailViewController
-            //let indexPath = sender as! NSIndexPath
-            //let selectedRow = favoriteBooksCollection[indexPath.row]
-            //destination.authorLabel.text = selectedRow.author
-            //destination.descriptionTextView.text = selectedRow.bookDescription
-            //destination.titleLabel.text = selectedRow.title
-            destination.authorSegue = "TestAuthor"
-            destination.descriptionSegue = "Lorem ipsum blah"
-            destination.titleSegue = "Book TM"
-            destination.title? = "Testing Book Title up here"
+            if let cell = sender as? MyBooksCollectionViewCell, let indexPath = collectionViewOutlet.indexPath(for: cell) {
+                if let destination = segue.destination as? FavoriteBookDetailViewController {
+                    print("\(indexPath.row)")
+                    //destination.authorLabel.text = selectedRow.author
+                    //destination.descriptionTextView.text = selectedRow.bookDescription
+                    //destination.titleLabel.text = selectedRow.title
+                    destination.authorSegue = "TestAuthor"
+                    destination.descriptionSegue = "Lorem ipsum blah"
+                    destination.titleSegue = "Book TM"
+                    destination.title? = "Testing Book Title up here"
+                    //destination.favoriteBook = selectedItem
+                }
+            }
         }
     }
     

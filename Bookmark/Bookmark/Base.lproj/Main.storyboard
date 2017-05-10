@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description TM" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aA8-Ng-gWw">
-                                <rect key="frame" x="26" y="157" width="323" height="311"/>
+                                <rect key="frame" x="26" y="134" width="323" height="421"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRj-3q-BHE">
-                                <rect key="frame" x="121" y="488" width="133" height="35"/>
+                                <rect key="frame" x="121" y="575" width="133" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Buy on Amazon"/>
                             </button>
@@ -47,14 +47,14 @@
                         <constraints>
                             <constraint firstItem="s85-nl-ihW" firstAttribute="centerX" secondItem="SD7-01-vqU" secondAttribute="centerX" id="3LF-Dk-LJb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aA8-Ng-gWw" secondAttribute="trailing" constant="10" id="5gD-Vo-W7I"/>
-                            <constraint firstItem="aA8-Ng-gWw" firstAttribute="top" secondItem="s85-nl-ihW" secondAttribute="bottom" constant="60" id="6eX-oD-EMy"/>
                             <constraint firstItem="s85-nl-ihW" firstAttribute="top" secondItem="MvI-61-UuW" secondAttribute="bottom" constant="8" id="6uB-0f-EJp"/>
                             <constraint firstItem="aA8-Ng-gWw" firstAttribute="centerX" secondItem="SD7-01-vqU" secondAttribute="centerX" id="98b-jJ-s4l"/>
+                            <constraint firstItem="aA8-Ng-gWw" firstAttribute="top" secondItem="EMv-FY-9cA" secondAttribute="bottom" constant="8" id="KFw-68-Bws"/>
                             <constraint firstItem="tRj-3q-BHE" firstAttribute="centerX" secondItem="SD7-01-vqU" secondAttribute="centerX" id="XAw-kN-gNY"/>
                             <constraint firstItem="aA8-Ng-gWw" firstAttribute="leading" secondItem="SD7-01-vqU" secondAttribute="leadingMargin" constant="10" id="Xlh-8X-2Xf"/>
                             <constraint firstItem="EMv-FY-9cA" firstAttribute="centerX" secondItem="SD7-01-vqU" secondAttribute="centerX" id="iJu-vC-sWZ"/>
                             <constraint firstItem="tRj-3q-BHE" firstAttribute="top" secondItem="aA8-Ng-gWw" secondAttribute="bottom" constant="20" id="icu-sA-2la"/>
-                            <constraint firstItem="vJ7-Fu-vX0" firstAttribute="top" secondItem="aA8-Ng-gWw" secondAttribute="bottom" constant="150" id="llg-vu-k45"/>
+                            <constraint firstItem="vJ7-Fu-vX0" firstAttribute="top" secondItem="tRj-3q-BHE" secondAttribute="bottom" constant="8" id="sKn-bV-4EV"/>
                             <constraint firstItem="EMv-FY-9cA" firstAttribute="top" secondItem="s85-nl-ihW" secondAttribute="bottom" constant="8" id="y00-Yl-BR2"/>
                         </constraints>
                     </view>
@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="2816.8000000000002" y="1424.4377811094455"/>
         </scene>
-        <!--Browse Books-->
+        <!--Browse Book View Controller-->
         <scene sceneID="nyU-Eh-OHn">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bwi-Ff-jzw" customClass="BrowseBookViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +116,25 @@
                             <constraint firstItem="I50-vl-xkh" firstAttribute="top" secondItem="eQW-i8-Xdy" secondAttribute="bottom" id="y2Q-pF-0tu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Browse Books" id="0Mj-vq-reu"/>
+                    <navigationItem key="navigationItem" id="0Mj-vq-reu">
+                        <nil key="title"/>
+                        <view key="titleView" userInteractionEnabled="NO" contentMode="scaleToFill" id="N3n-Np-eae">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QyN-Iu-vIH">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="QyN-Iu-vIH" secondAttribute="trailing" id="PZ7-nH-SFO"/>
+                                <constraint firstItem="QyN-Iu-vIH" firstAttribute="top" secondItem="N3n-Np-eae" secondAttribute="top" id="Py8-V3-KPQ"/>
+                                <constraint firstAttribute="bottom" secondItem="QyN-Iu-vIH" secondAttribute="bottom" id="jD0-0g-yGY"/>
+                                <constraint firstItem="QyN-Iu-vIH" firstAttribute="leading" secondItem="N3n-Np-eae" secondAttribute="leading" id="mkB-lj-lue"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="browseTableView" destination="I50-vl-xkh" id="cTg-em-Mkz"/>
                         <segue destination="fAR-Ss-9bB" kind="show" identifier="showRecommendedBooksSegue" id="511-Tu-sCd"/>
@@ -438,7 +456,25 @@
                             <constraint firstAttribute="trailing" secondItem="X0c-Eo-svF" secondAttribute="trailing" id="jdC-GH-A1o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Books" id="3bV-Jp-ZnR"/>
+                    <navigationItem key="navigationItem" id="3bV-Jp-ZnR">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Imr-r5-gCP">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="0T4-Tt-TjH">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="0T4-Tt-TjH" firstAttribute="leading" secondItem="Imr-r5-gCP" secondAttribute="leading" id="1yA-Dx-Ndg"/>
+                                <constraint firstAttribute="trailing" secondItem="0T4-Tt-TjH" secondAttribute="trailing" id="5UD-TC-SYk"/>
+                                <constraint firstAttribute="bottom" secondItem="0T4-Tt-TjH" secondAttribute="bottom" id="nXc-cX-wdY"/>
+                                <constraint firstItem="0T4-Tt-TjH" firstAttribute="top" secondItem="Imr-r5-gCP" secondAttribute="top" id="yTf-X4-ur7"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="X0c-Eo-svF" id="sbw-5H-aes"/>
                     </connections>
@@ -468,7 +504,7 @@
             </objects>
             <point key="canvasLocation" x="2817" y="-190"/>
         </scene>
-        <!--NYT Best Sellers-->
+        <!--Best Seller BookVC-->
         <scene sceneID="akQ-Ot-SCp">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="U1j-s2-KR7" customClass="BestSellerBookVC" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
@@ -527,7 +563,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" id="8n2-PY-H7V"/>
                             <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="7Q6-hK-N15" secondAttribute="bottom" id="evf-Qr-WYq"/>
@@ -535,7 +571,29 @@
                             <constraint firstItem="7Q6-hK-N15" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="ndQ-K0-KrH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="NYT Best Sellers" id="hJX-qu-sJu"/>
+                    <navigationItem key="navigationItem" id="hJX-qu-sJu">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Gvz-5I-fUw">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="upM-Kg-E41">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="upM-Kg-E41" secondAttribute="trailing" id="Ayw-fR-6qE"/>
+                                <constraint firstItem="upM-Kg-E41" firstAttribute="top" secondItem="Gvz-5I-fUw" secondAttribute="top" id="E2D-ov-G6W"/>
+                                <constraint firstAttribute="bottom" secondItem="upM-Kg-E41" secondAttribute="bottom" id="PqO-PF-kOr"/>
+                                <constraint firstItem="upM-Kg-E41" firstAttribute="leading" secondItem="Gvz-5I-fUw" secondAttribute="leading" id="dz8-jP-awK"/>
+                                <constraint firstItem="upM-Kg-E41" firstAttribute="centerY" secondItem="Gvz-5I-fUw" secondAttribute="centerY" id="mEC-WC-qZm"/>
+                                <constraint firstItem="upM-Kg-E41" firstAttribute="centerX" secondItem="Gvz-5I-fUw" secondAttribute="centerX" id="z6Q-pH-UDQ"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCollectionView" destination="7Q6-hK-N15" id="LqM-CA-dZH"/>
                     </connections>
@@ -557,7 +615,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -584,7 +642,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-x6-UJb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </textAttributes>
@@ -703,12 +761,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo" width="585" height="119"/>
         <image name="Books" width="25" height="25"/>
         <image name="Browse" width="25" height="25"/>
         <image name="List" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPP-Y4-AAB"/>
+        <segue reference="8S1-C7-5hl"/>
     </inferredMetricsTieBreakers>
 </document>
