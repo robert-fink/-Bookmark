@@ -54,6 +54,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="aA8-Ng-gWw" secondAttribute="trailing" constant="10" id="5gD-Vo-W7I"/>
                             <constraint firstItem="s85-nl-ihW" firstAttribute="top" secondItem="MvI-61-UuW" secondAttribute="bottom" constant="8" id="6uB-0f-EJp"/>
@@ -84,6 +85,7 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="eJ2-Xy-m0A" secondAttribute="trailing" id="9mR-GU-OMw"/>
                                 <constraint firstItem="eJ2-Xy-m0A" firstAttribute="leading" secondItem="o6Z-O4-eJ3" secondAttribute="leading" id="R30-UJ-Yed"/>
@@ -147,6 +149,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vfW-mv-UWO" firstAttribute="top" secondItem="I50-vl-xkh" secondAttribute="bottom" id="RAv-BR-DzO"/>
                             <constraint firstAttribute="trailing" secondItem="I50-vl-xkh" secondAttribute="trailing" id="k4h-LL-FrY"/>
@@ -252,6 +255,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zqh-a3-e3D" firstAttribute="centerX" secondItem="E0F-YR-wWn" secondAttribute="centerX" id="FGV-aT-IBH"/>
                             <constraint firstItem="6yg-Hu-Cdf" firstAttribute="top" secondItem="4Lq-lr-Cgj" secondAttribute="bottom" constant="24" id="VQ2-Zv-zyi"/>
@@ -337,6 +341,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="F7M-7R-Nh0" secondAttribute="trailing" constant="30" id="3aw-og-Ere"/>
                             <constraint firstItem="DBK-zF-kl5" firstAttribute="top" secondItem="JBj-0s-mrM" secondAttribute="bottom" constant="8" id="4Hf-dr-6VZ"/>
@@ -430,6 +435,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gL5-HD-J10" firstAttribute="top" secondItem="NYR-uJ-TaM" secondAttribute="bottom" constant="8" id="9jM-bK-EKc"/>
                             <constraint firstItem="beF-z6-A3z" firstAttribute="leading" secondItem="Tgt-ff-gxY" secondAttribute="leadingMargin" constant="10" id="Cry-uY-j7O"/>
@@ -753,6 +759,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="X0c-Eo-svF" firstAttribute="top" secondItem="T1R-fC-AaS" secondAttribute="bottom" id="Arf-e2-meY"/>
                             <constraint firstItem="hzB-Pb-g2h" firstAttribute="top" secondItem="X0c-Eo-svF" secondAttribute="bottom" id="Bal-dC-8X7"/>
@@ -873,6 +880,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" id="8n2-PY-H7V"/>
                             <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="7Q6-hK-N15" secondAttribute="bottom" id="evf-Qr-WYq"/>
@@ -924,7 +932,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -954,7 +962,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-x6-UJb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </textAttributes>
@@ -1040,9 +1048,10 @@
                 <navigationController title="Browse Books" automaticallyAdjustsScrollViewInsets="NO" id="gEP-Pq-thN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Browse" image="Browse" id="YkV-5o-kjz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ky-hG-ssG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1ky-hG-ssG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1059,9 +1068,10 @@
                 <navigationController title="Your Books" automaticallyAdjustsScrollViewInsets="NO" id="6vC-QX-H8e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Books" image="Books" id="OhX-bM-O4E"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wOv-Qg-wl7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wOv-Qg-wl7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1078,9 +1088,10 @@
                 <navigationController title="NYT Best Sellers" automaticallyAdjustsScrollViewInsets="NO" id="u5p-pN-lh4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="NYT Best Sellers" image="List" id="mbP-ti-WaZ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="slH-vn-gXg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="slH-vn-gXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1100,6 +1111,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8S1-C7-5hl"/>
+        <segue reference="ZPP-Y4-AAB"/>
     </inferredMetricsTieBreakers>
 </document>
