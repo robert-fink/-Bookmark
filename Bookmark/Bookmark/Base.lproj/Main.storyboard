@@ -304,20 +304,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD9-oX-iP0">
-                                <rect key="frame" x="46" y="360" width="283" height="32.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD9-oX-iP0">
+                                <rect key="frame" x="46" y="377" width="283" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-7R-Nh0">
-                                <rect key="frame" x="46" y="419" width="283" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-7R-Nh0">
+                                <rect key="frame" x="46" y="432.5" width="283" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc0-Sv-bKX">
-                                <rect key="frame" x="26" y="445" width="323" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc0-Sv-bKX">
+                                <rect key="frame" x="26" y="458.5" width="323" height="86.5"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -338,6 +338,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="KD9-oX-iP0" firstAttribute="top" secondItem="DBK-zF-kl5" secondAttribute="bottom" constant="25" id="01r-uR-odb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F7M-7R-Nh0" secondAttribute="trailing" constant="30" id="3aw-og-Ere"/>
                             <constraint firstItem="DBK-zF-kl5" firstAttribute="top" secondItem="JBj-0s-mrM" secondAttribute="bottom" constant="8" id="4Hf-dr-6VZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KD9-oX-iP0" secondAttribute="trailing" constant="30" id="4Hq-nN-AMt"/>
@@ -349,6 +350,7 @@
                             <constraint firstItem="DBK-zF-kl5" firstAttribute="leading" secondItem="8ve-q6-Eq2" secondAttribute="leadingMargin" constant="10" id="Rrh-Ep-HTn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UfH-SQ-wgx" secondAttribute="trailing" constant="84" id="VqH-7U-cof"/>
                             <constraint firstItem="UfH-SQ-wgx" firstAttribute="top" secondItem="Qc0-Sv-bKX" secondAttribute="bottom" constant="8" id="Y7E-r7-8vv"/>
+                            <constraint firstItem="KD9-oX-iP0" firstAttribute="centerX" secondItem="8ve-q6-Eq2" secondAttribute="centerX" id="ate-Zx-AXd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DBK-zF-kl5" secondAttribute="trailing" constant="10" id="cVE-NH-ABr"/>
                             <constraint firstItem="F7M-7R-Nh0" firstAttribute="top" secondItem="KD9-oX-iP0" secondAttribute="bottom" constant="26.5" id="cfG-Kn-LD4"/>
                             <constraint firstItem="Qc0-Sv-bKX" firstAttribute="leading" secondItem="8ve-q6-Eq2" secondAttribute="leadingMargin" constant="10" id="dfF-6h-vwY"/>

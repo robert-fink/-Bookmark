@@ -35,6 +35,7 @@ class RecommendedBookDetailViewController: UIViewController {
         if let book = book {
             bookTitle.text = book.bookTitle
             author.text = book.bookAuthor
+            bookDescription.text = ""
             //            bookDescription.text = book.description
             let imageUrlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(book.bookISBN13)")
             let task = URLSession.shared.dataTask(with: imageUrlString!) { (data, response, error) in
@@ -93,6 +94,7 @@ class RecommendedBookDetailViewController: UIViewController {
             favBook.isbn13 = book?.bookISBN13
             favBook.isbn10 = book?.bookISBN10
 //            favBook.bookDescription = book?.bookDescription
+            favBook.bookDescription = ""
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             if let title = book?.bookTitle {
                 let alert = UIAlertController(title: "Saved", message: "\(title) added to favorites.", preferredStyle: UIAlertControllerStyle.alert)

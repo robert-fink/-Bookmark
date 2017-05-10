@@ -74,9 +74,10 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
                     //destination.descriptionTextView.text = selectedRow.bookDescription
                     //destination.titleLabel.text = selectedRow.title
                     destination.authorSegue = favoriteBooksCollection[indexPath.row].author!
-                    //destination.descriptionSegue = favoriteBooksCollection[indexPath.row].bookDescription!
+                    destination.descriptionSegue = favoriteBooksCollection[indexPath.row].bookDescription!
                     destination.titleSegue = favoriteBooksCollection[indexPath.row].title!
                     destination.imageSegue = cell.bookImage.image!
+                    
                     //destination.favoriteBook = selectedItem
                 }
             }

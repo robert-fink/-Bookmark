@@ -91,7 +91,7 @@ class NYTDetailViewController: UIViewController {
             favBook.author = book?.bookAuthor
             favBook.isbn13 = book?.bookISBN13
             favBook.isbn10 = book?.bookISBN10
-            //            favBook.bookDescription = book?.bookDescription
+            favBook.bookDescription = book?.bookDescription
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             if let title = book?.bookTitle {
                 let alert = UIAlertController(title: "Saved", message: "\(title) added to favorites.", preferredStyle: UIAlertControllerStyle.alert)

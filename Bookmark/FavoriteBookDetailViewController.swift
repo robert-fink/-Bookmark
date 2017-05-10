@@ -26,9 +26,6 @@ class FavoriteBookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        titleLabel.text = favoriteBook?.title
-//        authorLabel.text = favoriteBook?.author
-//        descriptionLabel.text = favoriteBook?.bookDescription
         authorLabel.text = authorSegue
         descriptionLabel.text = descriptionSegue
         titleLabel.text = titleSegue

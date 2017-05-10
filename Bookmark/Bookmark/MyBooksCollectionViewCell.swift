@@ -26,15 +26,15 @@ class MyBooksCollectionViewCell: UICollectionViewCell {
         // Set the bookname based off the data received from the NYTBestSellerModel
         bookTitle.text = self.favoriteBook.title
         
-        print(favoriteBook.isbn13!)
+//        print(favoriteBook.isbn13!)
         
         // Convert to URL
         let urlString = "http://covers.openlibrary.org/b/isbn/" + favoriteBook.isbn13! + "-L.jpg"
         let imageUrl = URL(string: urlString)
         
-        print(imageUrl!)
+//        print(imageUrl!)
         
-        print(favoriteBook)
+//        print(favoriteBook)
         
         // Get the Data from the ImageURL
         let imageData = try! Data(contentsOf: imageUrl!)
