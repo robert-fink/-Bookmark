@@ -34,28 +34,53 @@ class RecommendedBookDetailViewController: UIViewController {
     func displayBook() {
         if let book = book {
             bookTitle.text = book.bookTitle
-            
-            let imageUrlString = "https://www.googleapis.com/books/v1/volumes?q=isbn:\(book.bookISBN13)"
-            
-            // Convert to URL
-            let imageUrl = URL(string: imageUrlString)
-            
-            // Get the Data from the ImageURL
-            let imageData = try! Data(contentsOf: imageUrl!)
-            
-            // Create a image from the imageData
-            let image = UIImage(data: imageData)
-            
-            // Display the image in the UImageView
-            imageView.image = image
-            
             author.text = book.bookAuthor
+            //            bookDescription.text = book.description
+            let imageUrlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(book.bookISBN13)")
+            let task = URLSession.shared.dataTask(with: imageUrlString!) { (data, response, error) in
+                
+                if error != nil {
+                    print(error!)
+                } else {
+                    
+                    if let urlContent = data {
+                        do {
+                            if let json = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject> {
+                                let root =  json
+                                if let results = root["items"] as? [Dictionary<String, AnyObject>] {
+                                    for obj in results {
+                                        let volumeInfo = obj["volumeInfo"] as! Dictionary<String, AnyObject>
+                                        let imageLinks = volumeInfo["imageLinks"] as! Dictionary<String, AnyObject>
+                                        let imageString = imageLinks["thumbnail"] as! String
+                                        //        // Convert to URL
+                                        let imageUrl = URL(string: imageString)
+                                        //
+                                        //        // Get the Data from the ImageURL
+                                        // This returns url that is http
+                                        let imageData = try! Data(contentsOf: imageUrl!)
+                                        //
+                                        //        // Create a image from the imageData
+                                        let image = UIImage(data: imageData)
+                                        //self.favBookImage.image = image
+                                        
+                                        DispatchQueue.main.sync(execute:  {
+                                            self.imageView.image = image
+                                        })
+                                    }
+                                }
+                                
+                                
+                                //print(json)
+                            }
+                            
+                        } catch {
+                            print("JSON Error")
+                        }
+                    }
+                }
+            }
+            task.resume()
             
-//            bookDescription.text = book.description
         }
-        
     }
-    
-    
-
 }
