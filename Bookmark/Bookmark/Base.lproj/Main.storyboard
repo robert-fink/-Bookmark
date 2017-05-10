@@ -968,6 +968,22 @@
                                                 <segue destination="Flr-XW-Q7T" kind="show" id="8S1-C7-5hl"/>
                                             </connections>
                                         </barButtonItem>
+                                        <view key="titleView" contentMode="scaleToFill" id="fwe-Pu-dhj">
+                                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-aH-eW7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="JGc-aH-eW7" firstAttribute="leading" secondItem="fwe-Pu-dhj" secondAttribute="leading" id="7S0-qF-BSW"/>
+                                                <constraint firstAttribute="bottom" secondItem="JGc-aH-eW7" secondAttribute="bottom" id="Ec8-5S-zHl"/>
+                                                <constraint firstAttribute="trailing" secondItem="JGc-aH-eW7" secondAttribute="trailing" id="cTN-bP-l71"/>
+                                                <constraint firstItem="JGc-aH-eW7" firstAttribute="top" secondItem="fwe-Pu-dhj" secondAttribute="top" id="lC1-fk-rn2"/>
+                                            </constraints>
+                                        </view>
                                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Lkx-k8-qZp">
                                             <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
