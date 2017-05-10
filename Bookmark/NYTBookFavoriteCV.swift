@@ -20,8 +20,7 @@ class NYTBookFavoriteCV: UICollectionViewCell {
         self.nytfavCategory = nytfavCategory
         
         // Set the bookname based off the data received from the NYTBestSellerModel
-        favBookLabel.text = self.nytfavCategory.bookAuthor
-        
+        favBookLabel.text = self.nytfavCategory.bookTitle
         _ = URLSession.shared
         let isbn = self.nytfavCategory.bookISBN13
         let urlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)")
@@ -40,7 +39,7 @@ class NYTBookFavoriteCV: UICollectionViewCell {
                                 for obj in results {
                                     let volumeInfo = obj["volumeInfo"] as! Dictionary<String, AnyObject>
                                     let imageLinks = volumeInfo["imageLinks"] as! Dictionary<String, AnyObject>
-                                    let imageString = imageLinks["smallThumbnail"] as! String
+                                    let imageString = imageLinks["thumbnail"] as! String
                                     //        // Convert to URL
                                     let imageUrl = URL(string: imageString)
                                     //
