@@ -13,7 +13,7 @@
         <!--Favorite Book Detail-->
         <scene sceneID="WjR-Ag-dDJ">
             <objects>
-                <viewController title="Book Title" id="4t4-VN-4il" userLabel="Favorite Book Detail" customClass="FavoriteBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4t4-VN-4il" userLabel="Favorite Book Detail" customClass="FavoriteBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MvI-61-UuW"/>
                         <viewControllerLayoutGuide type="bottom" id="vJ7-Fu-vX0"/>
@@ -71,6 +71,25 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eEq-No-w60" secondAttribute="trailing" constant="30" id="wqO-aD-bSL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Q3I-xu-V2p">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="o6Z-O4-eJ3">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="eJ2-Xy-m0A">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="eJ2-Xy-m0A" secondAttribute="trailing" id="9mR-GU-OMw"/>
+                                <constraint firstItem="eJ2-Xy-m0A" firstAttribute="leading" secondItem="o6Z-O4-eJ3" secondAttribute="leading" id="R30-UJ-Yed"/>
+                                <constraint firstAttribute="bottom" secondItem="eJ2-Xy-m0A" secondAttribute="bottom" id="o0r-7I-cTT"/>
+                                <constraint firstItem="eJ2-Xy-m0A" firstAttribute="top" secondItem="o6Z-O4-eJ3" secondAttribute="top" id="yR5-TU-q9y"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorLabel" destination="EMv-FY-9cA" id="UpQ-Ai-HL2"/>
                         <outlet property="bookImage" destination="s85-nl-ihW" id="qX9-J0-8vf"/>
@@ -230,6 +249,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rzd-zi-7Jt">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="XRE-JL-Sg9">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hH3-kH-p6J">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="hH3-kH-p6J" secondAttribute="trailing" id="12Y-BS-qbx"/>
+                                <constraint firstItem="hH3-kH-p6J" firstAttribute="leading" secondItem="XRE-JL-Sg9" secondAttribute="leading" id="ABJ-IG-23n"/>
+                                <constraint firstAttribute="bottom" secondItem="hH3-kH-p6J" secondAttribute="bottom" id="IRo-FP-m8d"/>
+                                <constraint firstItem="hH3-kH-p6J" firstAttribute="top" secondItem="XRE-JL-Sg9" secondAttribute="top" id="iG7-hJ-Euz"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="zqh-a3-e3D" id="1iE-ce-9AW"/>
                         <outlet property="myCollectionView" destination="zqh-a3-e3D" id="vJg-lL-OsX"/>
@@ -398,7 +436,7 @@
             </objects>
             <point key="canvasLocation" x="3289" y="3011"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="Jle-zO-nRl">
             <objects>
                 <viewController id="Flr-XW-Q7T" customClass="ProfileViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
@@ -411,19 +449,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name, Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubc-op-xWU">
-                                <rect key="frame" x="41" y="35" width="84" height="21"/>
+                                <rect key="frame" x="41" y="79" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite Categories:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXD-Ld-8wi">
-                                <rect key="frame" x="41" y="81" width="181" height="21"/>
+                                <rect key="frame" x="41" y="125" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-hu-oNd">
-                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
+                                <rect key="frame" x="0.0" y="171" width="375" height="447"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCategoryCell" id="Se3-Rn-HNo">
@@ -453,7 +491,24 @@
                             <constraint firstItem="O6e-RE-a9W" firstAttribute="top" secondItem="kR4-hu-oNd" secondAttribute="bottom" id="ln9-P5-nQl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="vAH-Er-fi4">
+                    <navigationItem key="navigationItem" id="vAH-Er-fi4">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="Z2Z-uu-R6e">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="202-BT-cbJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="202-BT-cbJ" firstAttribute="top" secondItem="Z2Z-uu-R6e" secondAttribute="top" id="hnp-9l-W1B"/>
+                                <constraint firstItem="202-BT-cbJ" firstAttribute="leading" secondItem="Z2Z-uu-R6e" secondAttribute="leading" id="kOI-FA-usT"/>
+                                <constraint firstAttribute="trailing" secondItem="202-BT-cbJ" secondAttribute="trailing" id="rud-4Z-6iP"/>
+                                <constraint firstAttribute="bottom" secondItem="202-BT-cbJ" secondAttribute="bottom" id="w65-Dz-8Uv"/>
+                            </constraints>
+                        </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qGJ-5F-b58">
                             <connections>
                                 <segue destination="GSr-EI-etJ" kind="show" id="cEy-bq-4Q0"/>
@@ -469,7 +524,7 @@
             </objects>
             <point key="canvasLocation" x="1292" y="1466"/>
         </scene>
-        <!--Edit Profile-->
+        <!--Edit Profile View Controller-->
         <scene sceneID="5JC-Ce-2Zc">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="GSr-EI-etJ" customClass="EditProfileViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
@@ -482,19 +537,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pB-ph-chh">
-                                <rect key="frame" x="163" y="45" width="50" height="21"/>
+                                <rect key="frame" x="163" y="89" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGr-Ti-ekJ">
-                                <rect key="frame" x="150" y="131" width="76" height="21"/>
+                                <rect key="frame" x="150" y="175" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-a1-SqA">
-                                <rect key="frame" x="0.0" y="157" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="201" width="375" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ijW-yl-LKx"/>
                                 </constraints>
@@ -503,7 +558,7 @@
                                 </date>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0by-FX-OWb">
-                                <rect key="frame" x="113" y="71" width="150" height="30"/>
+                                <rect key="frame" x="113" y="115" width="150" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2JU-5I-Pjt"/>
                                     <constraint firstAttribute="width" constant="150" id="pFV-sL-ywi"/>
@@ -513,7 +568,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmS-nh-Uk3">
-                                <rect key="frame" x="97" y="357" width="180" height="42"/>
+                                <rect key="frame" x="97" y="401" width="180" height="42"/>
                                 <color key="backgroundColor" red="0.3753450754206698" green="0.57932049605090552" blue="0.75616671954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <state key="normal" title="My Categories">
@@ -540,7 +595,24 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Edit Profile" id="4OQ-u3-g7l">
+                    <navigationItem key="navigationItem" id="4OQ-u3-g7l">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="IvY-4S-wsE">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZzA-J7-IcT">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="ZzA-J7-IcT" firstAttribute="top" secondItem="IvY-4S-wsE" secondAttribute="top" id="1p1-Oo-nP1"/>
+                                <constraint firstAttribute="bottom" secondItem="ZzA-J7-IcT" secondAttribute="bottom" id="Cl9-H9-kgk"/>
+                                <constraint firstItem="ZzA-J7-IcT" firstAttribute="leading" secondItem="IvY-4S-wsE" secondAttribute="leading" id="GbE-d7-Wrn"/>
+                                <constraint firstAttribute="trailing" secondItem="ZzA-J7-IcT" secondAttribute="trailing" id="cIM-gq-YGK"/>
+                            </constraints>
+                        </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="I2m-Ji-deL">
                             <connections>
                                 <action selector="saveProfile:" destination="GSr-EI-etJ" id="rXA-Iv-2UU"/>
@@ -799,7 +871,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -826,18 +898,35 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yZ-x6-UJb">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="My Categories" id="49I-8P-dxh">
+                                    <navigationItem id="49I-8P-dxh">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="8bT-UL-KL6">
                                             <connections>
                                                 <action selector="deleteCategories:" destination="Cdy-U6-PMB" id="1OF-KY-4NI"/>
                                                 <segue destination="Flr-XW-Q7T" kind="show" id="8S1-C7-5hl"/>
                                             </connections>
                                         </barButtonItem>
+                                        <view key="titleView" contentMode="scaleToFill" id="khz-Fm-bAm">
+                                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Mdn-op-13X">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="Mdn-op-13X" firstAttribute="top" secondItem="khz-Fm-bAm" secondAttribute="top" id="DEI-IQ-CVH"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mdn-op-13X" secondAttribute="bottom" id="Neo-Yi-nCA"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mdn-op-13X" secondAttribute="trailing" id="anH-RC-Vf4"/>
+                                                <constraint firstItem="Mdn-op-13X" firstAttribute="leading" secondItem="khz-Fm-bAm" secondAttribute="leading" id="zsC-QH-O0O"/>
+                                            </constraints>
+                                        </view>
                                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Lkx-k8-qZp">
                                             <connections>
                                                 <action selector="addCategories:" destination="Cdy-U6-PMB" id="FFa-R9-fxf"/>
@@ -952,6 +1041,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ygm-1Z-ccI"/>
+        <segue reference="ZPP-Y4-AAB"/>
     </inferredMetricsTieBreakers>
 </document>
