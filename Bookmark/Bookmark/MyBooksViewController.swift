@@ -30,55 +30,6 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         // Dispose of any resources that can be recreated.
     }
     
-    func getBookCover(isbn: String) -> UIImage? {
-        var imageToReturn: UIImage? = nil
-            let imageUrlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(isbn)")
-            let task = URLSession.shared.dataTask(with: imageUrlString!) { (data, response, error) in
-                
-                if error != nil {
-                    print(error!)
-                } else {
-                    
-                    if let urlContent = data {
-                        do {
-                            if let json = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as? Dictionary<String, AnyObject> {
-                                let root =  json
-                                if let results = root["items"] as? [Dictionary<String, AnyObject>] {
-                                    for obj in results {
-                                        let volumeInfo = obj["volumeInfo"] as! Dictionary<String, AnyObject>
-                                        let imageLinks = volumeInfo["imageLinks"] as! Dictionary<String, AnyObject>
-                                        let imageString = imageLinks["thumbnail"] as! String
-                                        //        // Convert to URL
-                                        let imageUrl = URL(string: imageString)
-                                        //
-                                        //        // Get the Data from the ImageURL
-                                        // This returns url that is http
-                                        let imageData = try! Data(contentsOf: imageUrl!)
-                                        //
-                                        //        // Create a image from the imageData
-                                        let image = UIImage(data: imageData)
-                                        //self.favBookImage.image = image
-                                        
-                                        DispatchQueue.main.sync(execute:  {
-                                            imageToReturn = image
-                                        })
-                                    }
-                                }
-                                
-                                
-                                //print(json)
-                            }
-                            
-                        } catch {
-                            print("JSON Error")
-                        }
-                    }
-                }
-            }
-        task.resume()
-        return imageToReturn
-    }
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -100,8 +51,8 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mybookscell", for: indexPath as IndexPath) as? MyBooksCollectionViewCell {
-            let bookmodelCell = favoriteBooksCollection[indexPath.row]
-            cell.configureCellForBookObj(favoriteBook: bookmodelCell)
+            let book = favoriteBooksCollection[indexPath.row]
+            cell.configureCellForBookObj(favoriteBook: book)
             
             return cell
             
@@ -122,10 +73,10 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
                     //destination.authorLabel.text = selectedRow.author
                     //destination.descriptionTextView.text = selectedRow.bookDescription
                     //destination.titleLabel.text = selectedRow.title
-                    destination.authorSegue = "TestAuthor"
-                    destination.descriptionSegue = "Lorem ipsum blah"
-                    destination.titleSegue = "Book TM"
-                    destination.title? = "Testing Book Title up here"
+                    destination.authorSegue = favoriteBooksCollection[indexPath.row].author!
+                    //destination.descriptionSegue = favoriteBooksCollection[indexPath.row].bookDescription!
+                    destination.titleSegue = favoriteBooksCollection[indexPath.row].title!
+                    destination.imageSegue = cell.bookImage.image!
                     //destination.favoriteBook = selectedItem
                 }
             }

@@ -14,12 +14,14 @@ class FavoriteBookDetailViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var favoriteBook : FavoriteBook?
     var titleSegue = ""
     var authorSegue = ""
     var imageSegue = #imageLiteral(resourceName: "Books")
-    var descriptionSegue = ""
+    var descriptionSegue = "Here is a short description describing some of the great stuff that happens in this book."
+    var amazonLink = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,8 @@ class FavoriteBookDetailViewController: UIViewController {
 //        descriptionLabel.text = favoriteBook?.bookDescription
         authorLabel.text = authorSegue
         descriptionLabel.text = descriptionSegue
-        bookImage.image = #imageLiteral(resourceName: "Books")
+        titleLabel.text = titleSegue
+        bookImage.image = imageSegue
         
     }
 

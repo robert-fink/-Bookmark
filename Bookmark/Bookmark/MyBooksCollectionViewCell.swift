@@ -29,7 +29,7 @@ class MyBooksCollectionViewCell: UICollectionViewCell {
         print(favoriteBook.isbn13!)
         
         // Convert to URL
-        let urlString = "http://covers.openlibrary.org/b/isbn/" + favoriteBook.isbn13! + "-M.jpg"
+        let urlString = "http://covers.openlibrary.org/b/isbn/" + favoriteBook.isbn13! + "-L.jpg"
         let imageUrl = URL(string: urlString)
         
         print(imageUrl!)
