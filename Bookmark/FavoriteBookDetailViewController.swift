@@ -15,13 +15,16 @@ class FavoriteBookDetailViewController: UIViewController {
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBAction func amazonButton(_ sender: Any) {
+        UIApplication.shared.openURL(URL(string: "https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=\(isbn13)")!)
+    }
     
     var favoriteBook : FavoriteBook?
     var titleSegue = ""
     var authorSegue = ""
     var imageSegue = #imageLiteral(resourceName: "Books")
     var descriptionSegue = ""
-    var amazonLink = ""
+    var isbn13 = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
