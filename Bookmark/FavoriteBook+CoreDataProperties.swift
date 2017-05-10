@@ -2,7 +2,7 @@
 //  FavoriteBook+CoreDataProperties.swift
 //  Bookmark
 //
-//  Created by Admin on 5/6/17.
+//  Created by Admin on 5/9/17.
 //  Copyright © 2017 Fink, Robert. All rights reserved.
 //
 
@@ -16,9 +16,10 @@ extension FavoriteBook {
         return NSFetchRequest<FavoriteBook>(entityName: "FavoriteBook")
     }
 
-    @NSManaged public var title: String?
     @NSManaged public var author: String?
-    @NSManaged public var imageURL: String?
     @NSManaged public var bookDescription: String?
+    @NSManaged public var isbn10: String?
+    @NSManaged public var title: String?
+    @NSManaged public var isbn13: String?
 
 }

@@ -90,15 +90,18 @@ class RecommendedBookDetailViewController: UIViewController {
             let favBook = FavoriteBook(context: context)
             favBook.title = book?.bookTitle
             favBook.author = book?.bookAuthor
+            favBook.isbn13 = book?.bookISBN13
+            favBook.isbn10 = book?.bookISBN10
 //            favBook.bookDescription = book?.bookDescription
-//            favBook.isbn13 = book?.bookISBN13
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-            
-            let alert = UIAlertController(title: "Saved", message: "\(String(describing: book?.bookTitle)) added to favorites.", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
-            }))
-
+            if let title = book?.bookTitle {
+                let alert = UIAlertController(title: "Saved", message: "\(title) added to favorites.", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                }))
+                
+                present(alert, animated: true, completion: nil)
+            }
             
         }
     }

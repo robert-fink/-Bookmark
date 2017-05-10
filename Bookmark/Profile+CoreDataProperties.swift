@@ -2,7 +2,7 @@
 //  Profile+CoreDataProperties.swift
 //  Bookmark
 //
-//  Created by Admin on 5/6/17.
+//  Created by Admin on 5/9/17.
 //  Copyright © 2017 Fink, Robert. All rights reserved.
 //
 

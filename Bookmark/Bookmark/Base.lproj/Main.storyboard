@@ -229,7 +229,7 @@
         <!--Detail View Controller-->
         <scene sceneID="T0J-Pq-Bmq">
             <objects>
-                <viewController id="Y7h-bt-y6d" customClass="NYTDetailViewController" sceneMemberID="viewController">
+                <viewController id="Y7h-bt-y6d" customClass="NYTDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JBj-0s-mrM"/>
                         <viewControllerLayoutGuide type="bottom" id="Sch-0L-iyt"/>
@@ -237,12 +237,69 @@
                     <view key="view" contentMode="scaleToFill" id="8ve-q6-Eq2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KD9-oX-iP0">
+                                <rect key="frame" x="170.5" y="114" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBK-zF-kl5">
+                                <rect key="frame" x="134.5" y="160" width="105" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="A2C-JA-IQr"/>
+                                    <constraint firstAttribute="width" constant="105" id="NAI-Ba-CMd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7M-7R-Nh0">
+                                <rect key="frame" x="161.5" y="290" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Qc0-Sv-bKX">
+                                <rect key="frame" x="26" y="361" width="323" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HXV-dP-EiJ"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-SQ-wgx">
+                                <rect key="frame" x="100" y="511" width="175" height="30"/>
+                                <state key="normal" title="Add to My Favorite Books"/>
+                                <connections>
+                                    <action selector="saveBookAsFavorite:" destination="Y7h-bt-y6d" eventType="touchUpInside" id="xYL-gf-ZS9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DBK-zF-kl5" firstAttribute="centerX" secondItem="8ve-q6-Eq2" secondAttribute="centerX" id="Cuq-BC-ZUA"/>
+                            <constraint firstItem="KD9-oX-iP0" firstAttribute="top" secondItem="JBj-0s-mrM" secondAttribute="bottom" constant="50" id="Kvk-Nc-27B"/>
+                            <constraint firstItem="Qc0-Sv-bKX" firstAttribute="top" secondItem="F7M-7R-Nh0" secondAttribute="bottom" constant="50" id="R2O-CQ-Y9S"/>
+                            <constraint firstItem="DBK-zF-kl5" firstAttribute="top" secondItem="KD9-oX-iP0" secondAttribute="bottom" constant="25" id="cqN-Lq-XHu"/>
+                            <constraint firstItem="UfH-SQ-wgx" firstAttribute="centerX" secondItem="8ve-q6-Eq2" secondAttribute="centerX" id="f5P-EO-2Qp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qc0-Sv-bKX" secondAttribute="trailing" constant="10" id="jlS-5W-4rp"/>
+                            <constraint firstItem="UfH-SQ-wgx" firstAttribute="top" secondItem="Qc0-Sv-bKX" secondAttribute="bottom" constant="50" id="pR5-qg-3kn"/>
+                            <constraint firstItem="F7M-7R-Nh0" firstAttribute="top" secondItem="DBK-zF-kl5" secondAttribute="bottom" constant="25" id="q1x-pE-iot"/>
+                            <constraint firstItem="F7M-7R-Nh0" firstAttribute="centerX" secondItem="8ve-q6-Eq2" secondAttribute="centerX" id="uoW-wi-RQu"/>
+                            <constraint firstItem="KD9-oX-iP0" firstAttribute="centerX" secondItem="8ve-q6-Eq2" secondAttribute="centerX" id="vGK-MQ-RjH"/>
+                            <constraint firstItem="Qc0-Sv-bKX" firstAttribute="leading" secondItem="8ve-q6-Eq2" secondAttribute="leadingMargin" constant="10" id="xZv-o7-byj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="author" destination="F7M-7R-Nh0" id="Wyg-x6-dud"/>
+                        <outlet property="bookDescription" destination="Qc0-Sv-bKX" id="Ejs-fl-Ei5"/>
+                        <outlet property="bookTitle" destination="KD9-oX-iP0" id="Ccn-Jt-miC"/>
+                        <outlet property="imageView" destination="DBK-zF-kl5" id="n2c-fD-TgO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXd-bR-Mry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4406" y="2239"/>
+            <point key="canvasLocation" x="4405.6000000000004" y="2238.530734632684"/>
         </scene>
         <!--Recommended Book Detail View Controller-->
         <scene sceneID="u3d-6T-SRw">
@@ -657,6 +714,7 @@
                                         <connections>
                                             <outlet property="bookImage" destination="raX-gh-Gg0" id="TOG-pG-LY9"/>
                                             <outlet property="myLabel" destination="UO9-ZS-pyK" id="2WT-RW-r3g"/>
+                                            <segue destination="Y7h-bt-y6d" kind="show" identifier="recentBestSellerDetailSegue" id="tg3-JO-AKT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -22,7 +22,6 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         getFavoriteBooks()
         collectionViewOutlet.reloadData()
@@ -38,7 +37,6 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 40
         return favoriteBooksCollection.count
     }
     
@@ -71,11 +69,6 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
             }
         }
     }
-    
-    // Set the indexPath of the selected item as the sender for the segue
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "mybooksdetailsegue", sender: indexPath)
-//    }
     
     func getFavoriteBooks(){
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {

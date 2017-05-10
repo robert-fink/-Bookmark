@@ -100,5 +100,17 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
         }
         task.resume()
     }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "recentBestSellerDetailSegue" {
+            if let cell = sender as? NYTBestSellerCV, let indexPath = myCollectionView.indexPath(for: cell) {
+                if let destination = segue.destination as? NYTDetailViewController {
+                    print("\(indexPath.row)")
+                    destination.book = books[indexPath.row]
+                }
+            }
+        }
+    }
 
 }
