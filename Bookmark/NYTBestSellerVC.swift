@@ -55,7 +55,7 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         print("You selected cell #\(indexPath.item)!")
-        //print(books[indexPath.item].bookListName)
+        print(books[indexPath.item].bookImage)
 
     }
     

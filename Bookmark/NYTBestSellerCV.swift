@@ -13,7 +13,7 @@ class NYTBestSellerCV: UICollectionViewCell {
         self.nytBestSellerBookModel = nytBestSellerBookModel
         
         // Set the bookname based off the data received from the NYTBestSellerModel
-        myLabel.text = self.nytBestSellerBookModel.bookListName
+        myLabel.text = self.nytBestSellerBookModel.bookTitle
         
         // Image is a url need to conver to UIImage
         let imageUrlString = self.nytBestSellerBookModel.bookImage

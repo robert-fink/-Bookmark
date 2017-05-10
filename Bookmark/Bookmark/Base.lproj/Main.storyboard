@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dale Book Detail-->
+        <!--Favorite Book Detail-->
         <scene sceneID="WjR-Ag-dDJ">
             <objects>
-                <viewController title="Book Title" id="4t4-VN-4il" userLabel="Dale Book Detail" customClass="FavoriteBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Book Title" id="4t4-VN-4il" userLabel="Favorite Book Detail" customClass="FavoriteBookDetailViewController" customModule="Bookmark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MvI-61-UuW"/>
                         <viewControllerLayoutGuide type="bottom" id="vJ7-Fu-vX0"/>
@@ -263,7 +263,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="HXV-dP-EiJ"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -557,17 +557,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X0c-Eo-svF" customClass="MyBooksCollectionView" customModule="Bookmark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="10" y="64" width="355" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U5c-oU-GDb">
                                     <size key="itemSize" width="90" height="90"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="10"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mybookscell" id="CTx-UO-jfW" customClass="MyBooksCollectionViewCell" customModule="Bookmark" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                        <rect key="frame" x="0.0" y="10" width="100" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
@@ -602,6 +602,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fFu-b2-BPC">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="2zC-a0-vY6" id="Df7-2D-K7E"/>
                                     <outlet property="delegate" destination="2zC-a0-vY6" id="waF-Am-4fY"/>
@@ -612,8 +616,8 @@
                         <constraints>
                             <constraint firstItem="X0c-Eo-svF" firstAttribute="top" secondItem="T1R-fC-AaS" secondAttribute="bottom" id="Arf-e2-meY"/>
                             <constraint firstItem="hzB-Pb-g2h" firstAttribute="top" secondItem="X0c-Eo-svF" secondAttribute="bottom" id="Bal-dC-8X7"/>
-                            <constraint firstItem="X0c-Eo-svF" firstAttribute="leading" secondItem="KVq-FW-amf" secondAttribute="leading" id="b5s-4B-ePv"/>
-                            <constraint firstAttribute="trailing" secondItem="X0c-Eo-svF" secondAttribute="trailing" id="jdC-GH-A1o"/>
+                            <constraint firstItem="X0c-Eo-svF" firstAttribute="leading" secondItem="KVq-FW-amf" secondAttribute="leading" constant="10" id="b5s-4B-ePv"/>
+                            <constraint firstAttribute="trailing" secondItem="X0c-Eo-svF" secondAttribute="trailing" constant="10" id="jdC-GH-A1o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3bV-Jp-ZnR">
@@ -677,17 +681,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7Q6-hK-N15">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="10" y="64" width="355" height="554"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y9P-KU-hOD">
                                     <size key="itemSize" width="100" height="130"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="10"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Hsi-Ir-lVV" customClass="NYTBestSellerCV" customModule="Bookmark" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
+                                        <rect key="frame" x="0.0" y="10" width="100" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="130"/>
@@ -698,7 +702,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -718,6 +722,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="exd-LC-ihG">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="10"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="U1j-s2-KR7" id="dwX-iv-QFH"/>
                                     <outlet property="delegate" destination="U1j-s2-KR7" id="mGC-ED-w56"/>
@@ -728,8 +736,8 @@
                         <constraints>
                             <constraint firstItem="7Q6-hK-N15" firstAttribute="top" secondItem="9m7-Lk-chc" secondAttribute="bottom" id="8n2-PY-H7V"/>
                             <constraint firstItem="pq0-cN-QzZ" firstAttribute="top" secondItem="7Q6-hK-N15" secondAttribute="bottom" id="evf-Qr-WYq"/>
-                            <constraint firstAttribute="trailing" secondItem="7Q6-hK-N15" secondAttribute="trailing" id="h2S-K7-qjQ"/>
-                            <constraint firstItem="7Q6-hK-N15" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" id="ndQ-K0-KrH"/>
+                            <constraint firstAttribute="trailing" secondItem="7Q6-hK-N15" secondAttribute="trailing" constant="10" id="h2S-K7-qjQ"/>
+                            <constraint firstItem="7Q6-hK-N15" firstAttribute="leading" secondItem="RPg-bu-vPl" secondAttribute="leading" constant="10" id="ndQ-K0-KrH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hJX-qu-sJu">
@@ -776,7 +784,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lfy-ha-R8I">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" textLabel="EqU-oF-WLM" style="IBUITableViewCellStyleDefault" id="nwM-2D-JNR">
@@ -929,6 +937,6 @@
         <image name="Profile" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ygm-1Z-ccI"/>
+        <segue reference="8S1-C7-5hl"/>
     </inferredMetricsTieBreakers>
 </document>
