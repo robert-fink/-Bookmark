@@ -20,7 +20,7 @@ class FavoriteBookDetailViewController: UIViewController {
     var titleSegue = ""
     var authorSegue = ""
     var imageSegue = #imageLiteral(resourceName: "Books")
-    var descriptionSegue = "Here is a short description describing some of the great stuff that happens in this book."
+    var descriptionSegue = ""
     var amazonLink = ""
     
     override func viewDidLoad() {
