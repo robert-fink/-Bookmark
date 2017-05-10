@@ -83,4 +83,23 @@ class RecommendedBookDetailViewController: UIViewController {
             
         }
     }
+    
+    
+    @IBAction func saveBookAsFavorite(_ sender: UIButton) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let favBook = FavoriteBook(context: context)
+            favBook.title = book?.bookTitle
+            favBook.author = book?.bookAuthor
+//            favBook.bookDescription = book?.bookDescription
+//            favBook.isbn13 = book?.bookISBN13
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            
+            let alert = UIAlertController(title: "Saved", message: "\(String(describing: book?.bookTitle)) added to favorites.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            }))
+
+            
+        }
+    }
 }

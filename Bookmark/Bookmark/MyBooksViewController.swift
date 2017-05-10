@@ -21,6 +21,12 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
     }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getFavoriteBooks()
+        collectionViewOutlet.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -32,8 +38,8 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 40
-        //return trip.photos.count
+//        return 40
+        return favoriteBooksCollection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,7 +47,7 @@ class MyBooksViewController: UIViewController, UICollectionViewDataSource, UICol
         
         if let cell = cell as? MyBooksCollectionViewCell {
             cell.bookImage.image = #imageLiteral(resourceName: "Books")
-//            cell.bookTitle.text = favoriteBooksCollection[indexPath.row].title
+            cell.bookTitle.text = favoriteBooksCollection[indexPath.row].title
         }
         
         return cell
