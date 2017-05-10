@@ -34,7 +34,7 @@ class NYTDetailViewController: UIViewController {
         if let book = book {
             bookTitle.text = book.bookTitle
             author.text = book.bookAuthor
-            //            bookDescription.text = book.description
+            bookDescription.text = book.bookDescription
             let imageUrlString = URL(string: "https://www.googleapis.com/books/v1/volumes?q=isbn:\(book.bookISBN13)")
             let task = URLSession.shared.dataTask(with: imageUrlString!) { (data, response, error) in
                 
