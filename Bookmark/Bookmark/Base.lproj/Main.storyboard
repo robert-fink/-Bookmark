@@ -248,7 +248,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -609,12 +609,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmS-nh-Uk3">
-                                <rect key="frame" x="106.5" y="357" width="161" height="42"/>
-                                <color key="backgroundColor" red="0.46666666666666667" green="0.52941176470588236" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="91" y="357" width="193" height="42"/>
+                                <color key="backgroundColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                 <state key="normal" title="My Categories">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Cdy-U6-PMB" kind="show" id="ePF-P0-rxd"/>
@@ -624,15 +623,16 @@
                         <color key="backgroundColor" red="0.95294117649999999" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qv7-a1-SqA" firstAttribute="leading" secondItem="gSx-fK-qCO" secondAttribute="leading" id="1Bg-3V-tQc"/>
+                            <constraint firstItem="vmS-nh-Uk3" firstAttribute="leading" secondItem="gSx-fK-qCO" secondAttribute="leadingMargin" constant="75" id="23f-DT-mYC"/>
                             <constraint firstItem="pGr-Ti-ekJ" firstAttribute="top" secondItem="0by-FX-OWb" secondAttribute="bottom" constant="30" id="3Jo-Wt-yB9"/>
                             <constraint firstItem="9pB-ph-chh" firstAttribute="top" secondItem="520-NF-5mJ" secondAttribute="bottom" constant="25" id="3fJ-xo-IgY"/>
                             <constraint firstAttribute="trailing" secondItem="qv7-a1-SqA" secondAttribute="trailing" id="Bxt-UX-a0X"/>
                             <constraint firstItem="pGr-Ti-ekJ" firstAttribute="centerX" secondItem="gSx-fK-qCO" secondAttribute="centerX" id="DXf-tK-MPX"/>
-                            <constraint firstItem="vmS-nh-Uk3" firstAttribute="centerX" secondItem="gSx-fK-qCO" secondAttribute="centerX" id="QNq-CQ-bzF"/>
                             <constraint firstItem="qv7-a1-SqA" firstAttribute="top" secondItem="pGr-Ti-ekJ" secondAttribute="bottom" constant="5" id="UF9-0g-QFb"/>
                             <constraint firstItem="0by-FX-OWb" firstAttribute="top" secondItem="9pB-ph-chh" secondAttribute="bottom" constant="5" id="YjR-5J-uXn"/>
                             <constraint firstItem="vmS-nh-Uk3" firstAttribute="top" secondItem="qv7-a1-SqA" secondAttribute="bottom" constant="50" id="d0a-Zq-dxf"/>
                             <constraint firstItem="0by-FX-OWb" firstAttribute="centerX" secondItem="gSx-fK-qCO" secondAttribute="centerX" id="nL3-dk-amY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vmS-nh-Uk3" secondAttribute="trailing" constant="75" id="pNN-RG-cEp"/>
                             <constraint firstItem="9pB-ph-chh" firstAttribute="centerX" secondItem="gSx-fK-qCO" secondAttribute="centerX" id="wRu-aM-Qen"/>
                         </constraints>
                     </view>
@@ -1012,7 +1012,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wDT-M1-fTH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Q1-bp-WVO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q1-bp-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
