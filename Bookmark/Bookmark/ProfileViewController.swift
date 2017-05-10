@@ -21,6 +21,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         getFavoriteCategories()
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getProfileData()
+        getFavoriteCategories()
+        categoryTableView.reloadData()
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
