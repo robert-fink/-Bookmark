@@ -15,12 +15,16 @@ class EditProfileViewController: UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var btn: UIButton!
+    
     var dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProfile()
         dateFormatter.dateStyle = .short
+        btn.layer.cornerRadius = 10
+        btn.clipsToBounds = true
     }
     
 

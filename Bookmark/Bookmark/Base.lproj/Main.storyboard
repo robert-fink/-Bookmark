@@ -25,7 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRj-3q-BHE">
                                 <rect key="frame" x="121" y="598" width="133" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Buy on Amazon"/>
+                                <state key="normal" title="Buy on Amazon">
+                                    <color key="titleColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s85-nl-ihW">
                                 <rect key="frame" x="26" y="72" width="323" height="280"/>
@@ -315,7 +317,9 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfH-SQ-wgx">
                                 <rect key="frame" x="100" y="553" width="175" height="30"/>
-                                <state key="normal" title="Add to My Favorite Books"/>
+                                <state key="normal" title="Add to My Favorite Books">
+                                    <color key="titleColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="saveBookAsFavorite:" destination="Y7h-bt-y6d" eventType="touchUpInside" id="xYL-gf-ZS9"/>
                                 </connections>
@@ -400,7 +404,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4E-xv-hoW">
                                 <rect key="frame" x="100" y="553" width="175" height="30"/>
-                                <state key="normal" title="Add to My Favorite Books"/>
+                                <state key="normal" title="Add to My Favorite Books">
+                                    <color key="titleColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="saveBookAsFavorite:" destination="GOn-39-x7K" eventType="touchUpInside" id="4Sp-YB-Wce"/>
                                 </connections>
@@ -543,6 +549,7 @@
                             </constraints>
                         </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="qGJ-5F-b58">
+                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="GSr-EI-etJ" kind="show" id="cEy-bq-4Q0"/>
                             </connections>
@@ -601,10 +608,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmS-nh-Uk3">
-                                <rect key="frame" x="97" y="357" width="180" height="42"/>
-                                <color key="backgroundColor" red="0.3753450754206698" green="0.57932049605090552" blue="0.75616671954314718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmS-nh-Uk3">
+                                <rect key="frame" x="106.5" y="357" width="161" height="42"/>
+                                <color key="backgroundColor" red="0.46666666666666667" green="0.52941176470588236" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                 <state key="normal" title="My Categories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -640,6 +648,7 @@
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="ZzA-J7-IcT" firstAttribute="top" secondItem="IvY-4S-wsE" secondAttribute="top" id="1p1-Oo-nP1"/>
                                 <constraint firstAttribute="bottom" secondItem="ZzA-J7-IcT" secondAttribute="bottom" id="Cl9-H9-kgk"/>
@@ -648,6 +657,7 @@
                             </constraints>
                         </view>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="I2m-Ji-deL">
+                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="saveProfile:" destination="GSr-EI-etJ" id="rXA-Iv-2UU"/>
                             </connections>
@@ -655,6 +665,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btn" destination="vmS-nh-Uk3" id="uBM-cM-D7W"/>
                         <outlet property="datePicker" destination="qv7-a1-SqA" id="ccX-1F-eGa"/>
                         <outlet property="name" destination="0by-FX-OWb" id="6cG-Ke-t9p"/>
                         <segue destination="Flr-XW-Q7T" kind="show" identifier="savedProfile" id="Ygm-1Z-ccI"/>
@@ -943,6 +954,7 @@
                                     <navigationItem id="49I-8P-dxh">
                                         <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" systemItem="save" id="8bT-UL-KL6">
+                                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="deleteCategories:" destination="Cdy-U6-PMB" id="1OF-KY-4NI"/>
                                                 <segue destination="Flr-XW-Q7T" kind="show" id="8S1-C7-5hl"/>
@@ -965,6 +977,7 @@
                                             </constraints>
                                         </view>
                                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Lkx-k8-qZp">
+                                            <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="addCategories:" destination="Cdy-U6-PMB" id="FFa-R9-fxf"/>
                                             </connections>
@@ -999,9 +1012,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wDT-M1-fTH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="vQv-f1-WpE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Q1-bp-WVO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Q1-bp-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.46666666670000001" green="0.52941176469999995" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
