@@ -84,7 +84,7 @@ class BestSellerBookVC: UIViewController, UICollectionViewDataSource, UICollecti
                                 }
                                 
                             }
-                            DispatchQueue.main.sync {
+                            DispatchQueue.main.async {
                                 
                                 self.myCollectionView.reloadData()
                                 

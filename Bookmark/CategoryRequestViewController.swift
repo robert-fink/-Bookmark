@@ -88,7 +88,7 @@ class CategoryRequestViewController: UIViewController, UICollectionViewDataSourc
                                 }
                                 
                             }
-                            DispatchQueue.main.sync {
+                            DispatchQueue.main.async {
                                 
                                 self.myCollectionView.reloadData()
                                 

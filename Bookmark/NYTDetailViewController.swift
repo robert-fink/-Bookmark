@@ -62,7 +62,7 @@ class NYTDetailViewController: UIViewController {
                                         let image = UIImage(data: imageData)
                                         //self.favBookImage.image = image
                                         
-                                        DispatchQueue.main.sync(execute:  {
+                                        DispatchQueue.main.async(execute:  {
                                             self.imageView.image = image
                                         })
                                     }
